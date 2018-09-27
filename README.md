@@ -26,4 +26,7 @@ Follow the steps below to clone the repository, using SourceTree.
 ## Naming Conventions
 > This section goes over the naming conventions for different aspects of code in this repository.
 ### Variables
-The naming of variables is always in camel case, rather than using underscores.
+The naming of variables is always in camel case, rather than using underscores. Make sure the first letter of a variable is lowercase.
+
+### Method Names
+Just like variables, the naming of methods is always in camel case, rather than using underscores. Make sure the first letter of a variable is uppercase.
