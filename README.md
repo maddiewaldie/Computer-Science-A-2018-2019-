@@ -1,7 +1,7 @@
 # AP Computer Science A: Maddie Waldie Code
 
 ## Repository Setup
-> This section goes over how to set up the GitHub repository.
+> This section goes over how to set up the GitHub repository, using two different methods.
 ### Using Terminal
 Clone `the AP Cpmputer Science A: Maddie Waldie Code` repository:
 
@@ -25,8 +25,23 @@ Follow the steps below to clone the repository, using SourceTree.
 
 ## Naming Conventions
 > This section goes over the naming conventions for different aspects of code in this repository.
-### Variables
-The naming of variables is always in camel case, rather than using underscores. Make sure the first letter of a variable is lowercase.
+### Project Names
+The names of labs should be the only folders that use underscores in their names. When naming a project, always put the lab name, followed by the author's last name, and finally the author's first name.
+
+Below, you can see an example of how to name a project.
+
+    LabName_LastName_FirstName
 
 ### Method Names
-Just like variables, the naming of methods is always in camel case, rather than using underscores. Make sure the first letter of a variable is uppercase.
+Just like variables, the naming of methods is always in camel case, rather than using underscores. Make sure the first letter of a method is uppercase.
+
+Below, you can see an example of how to name a method.
+
+    MethodName()
+
+### Variable Names
+The naming of variables is always in camel case, rather than using underscores. Make sure the first letter of a variable is lowercase.
+
+Below, you can see an example of how to name a project.
+
+    variableName
