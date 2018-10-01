@@ -1,4 +1,4 @@
-# Spongebob Game of Catch
+# Spongebob Game of Catch (Lab 1)
 
 ## Purpose of Project
 
@@ -7,5 +7,5 @@
 ## User Instructions
 
 ## About
-* Last Updated: October 1, 2018
 * Author: Madeleine Waldie
+* Last Updated: October 1, 2018
