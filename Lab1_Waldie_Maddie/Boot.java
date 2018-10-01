@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Boot here.
+ * The boot is an object that Spongebob will have to avoid.
  * 
  * @author Maddie Waldie
- * @version September 27, 2018
+ * @version October 1, 2018
  */
 public class Boot extends Actor
 {
@@ -15,20 +15,34 @@ public class Boot extends Actor
      */
     public void act() 
     {
+        // As long as the game is still running, these things will be called
         if (Jellyfish.timerDone == false)
         {
+            // Move the boot
             moveBoot(5);
+            
+            // Turn randomly
             randomTurn(90);
+            
+            // Decrement the score if Spongebob touches the boot.
             takeAwayPoints();
+            
+            // If the boot touches the edge, it will turn
             edgeTouch();
         }
     }   
     
+    /**
+     * Method: move the boot around the world
+     */
     private void moveBoot(int amntToMove)
     {
         move(amntToMove);
     }
     
+    /**
+     * Method: randomly turn the boot
+     */
     private void randomTurn(int amntToTurn)
     {
         if((Math.random()*20) <= 0.40)
@@ -37,24 +51,35 @@ public class Boot extends Actor
         }
     }
     
+    /**
+     * Method: take away points if the boot touches the spongebob class
+     */
     private void takeAwayPoints()
     {
         if (isTouching(Spongebob.class))
         {
-            Jellyfish.score -= 1;
+            // Decrement the score
+            Jellyfish.score -= 5;
+            
+            // Remove boot
             getWorld().removeObject(this);
         }
     }
     
+    /**
+     * Method: if the boot touches the edge, it will turn away
+     */
     private void edgeTouch()
     {
         if(getWorld() == null) 
         {
             return;
         }
+        // Check if boot is at edge
         else if(isAtEdge())
         {
-            getWorld().removeObject(this);
+            // Turn boot
+            turn(90);
         }
     }
     

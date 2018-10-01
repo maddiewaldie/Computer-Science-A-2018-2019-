@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Karen here.
+ * Karen is an actor that Spongebob, the main character, should avoid.
  * 
  * @author Maddie Waldie
- * @version September 27, 2018
+ * @version October 1, 2018
  */
 public class Karen extends Actor
 {
@@ -14,6 +14,6 @@ public class Karen extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+        
     }    
 }

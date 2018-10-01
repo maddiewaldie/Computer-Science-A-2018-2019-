@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class StartButton here.
+ * When the start button is pressed, the game will start.
  * 
  * @author Maddie Waldie
- * @version September 27, 2018
+ * @version October 1, 2018
  */
 public class StartButton extends Actor
 {
@@ -15,16 +15,23 @@ public class StartButton extends Actor
      */
     public void act() 
     {
+        // Check to see if the user clicks the button
         mouseClick();
     }   
 
+    /**
+     * Method: if the user clicks the button, the world will be set to CatchWorld.
+     */
     private void mouseClick()
     {
-       if(Greenfoot.mouseClicked(this))
+       // Check if button is clicked
+        if(Greenfoot.mouseClicked(this))
        {
+           // Set world
            CatchWorld c = new CatchWorld();
            Greenfoot.setWorld(c);
            
+           // Reset timer and score
            Spongebob.timer = 1800;
            Jellyfish.score = 0;
        }

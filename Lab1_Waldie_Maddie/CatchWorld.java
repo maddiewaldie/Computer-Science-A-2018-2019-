@@ -1,38 +1,37 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * The Catch World is the main world for the game, where the user will play.
  * 
  * @author Maddie Waldie
- * @version September 27, 2018
+ * @version October 1, 2018
  */
 
 public class CatchWorld extends World
 {
-    /**
-     * Constructor for objects of class MyWorld.
-     * 
-     */
-    //Construct characters
+    // Characters
     Spongebob spongebob = new Spongebob();
     Plankton plankton = new Plankton();
     Karen karen = new Karen();
     
-    // Construct objects to catch
+    // Objects to catch
     Jellyfish jellyfish1 = new Jellyfish(1);
     Jellyfish jellyfish2 = new Jellyfish(1);
     Jellyfish jellyfish3 = new Jellyfish(2);
     Jellyfish jellyfish4 = new Jellyfish(2);
     
-    // Construct objects to avoid
+    // Objects to avoid
     Can can1 = new Can();
     Can can2 = new Can();
-    
     Boot boot1 = new Boot();
     Boot boot2 = new Boot();
     
+    // Button
     PauseButton pause = new PauseButton();
     
+    /**
+     * Constructor for objects of class CatchWorld.
+     */
     public CatchWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -49,6 +48,10 @@ public class CatchWorld extends World
         addScoreAndTime();
     }
     
+    
+    /**
+     * Method to add all ovbjects needed to the Catch World
+     */
     private void addObjects()
     {
         // Objects to catch
@@ -62,7 +65,9 @@ public class CatchWorld extends World
         addObject(pause, 703, 550);
     }
     
-
+    /**
+     * Method to add the score and time to the bottom right corner of the world
+     */
     private void addScoreAndTime()
     {
         // Show score

@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class ResumeButton here.
+ * This button, when pressed, will lead back to the CatchWorld.
+ * Because the game will resume, the score and status of the game will stay as they were when the user paused the game.
  * 
  * @author Maddie Waldie
- * @version September 27, 2018
+ * @version October 1, 2018
  */
 public class ResumeButton extends Actor
 {
@@ -14,16 +15,23 @@ public class ResumeButton extends Actor
      */
     public void act() 
     {
+        // Check to see if the user clicks the button
         mouseClick();
     }  
     
+    /**
+     * Method: if the user clicks the button, the world will be set to CatchWorld.
+     */
     private void mouseClick()
     {
+       // Check if button is clicked
        if(Greenfoot.mouseClicked(this))
        {
+           // Set world
            CatchWorld c = new CatchWorld();
            Greenfoot.setWorld(c);
            
+           // Make sure the timer and score are how they were before the game was paused.
            Spongebob.timer = PauseButton.lastTime;
            Jellyfish.score = PauseButton.lastScore;
            

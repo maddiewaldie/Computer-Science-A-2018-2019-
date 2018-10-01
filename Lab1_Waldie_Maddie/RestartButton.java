@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class RestartButton here.
+ * This button, when pressed, will lead back to the CatchWorld.
+ * The score and timer will be reset, and the game will start over.
  * 
  * @author Maddie Waldie
- * @version September 27, 2018
+ * @version October 1, 2018
  */
 public class RestartButton extends Actor
 {
@@ -14,16 +15,23 @@ public class RestartButton extends Actor
      */
     public void act() 
     {
+        // Check to see if the user clicks the button
         mouseClick();
     }    
     
+    /**
+     * Method: if the user clicks the button, the world will be set to CatchWorld.
+     */
     private void mouseClick()
     {
+       // Check if button is clicked
        if(Greenfoot.mouseClicked(this))
        {
+           // Set world
            CatchWorld c = new CatchWorld();
            Greenfoot.setWorld(c);
            
+           // Reset the timer and score
            Spongebob.timer = 1800;
            Jellyfish.score = 0;
        }
