@@ -2,9 +2,9 @@
 
 ## Purpose of Project
 
-## How to Start Project:
+## How to Start Project
 
-## User Instructions:
+## User Instructions
 
 ## About
 * Last Updated: October 1, 2018
