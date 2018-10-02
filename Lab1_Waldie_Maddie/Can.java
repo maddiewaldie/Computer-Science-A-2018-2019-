@@ -58,7 +58,7 @@ public class Can extends Actor
         if (isTouching(Spongebob.class))
         {
             // Decrement the score
-            Jellyfish.score -= 10;
+            Jellyfish.score -= 5;
             
             // Remove can
             getWorld().removeObject(this);

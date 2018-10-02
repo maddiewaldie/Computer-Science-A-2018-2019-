@@ -59,7 +59,7 @@ public class Boot extends Actor
         if (isTouching(Spongebob.class))
         {
             // Decrement the score
-            Jellyfish.score -= 5;
+            Jellyfish.score -= 2;
             
             // Remove boot
             getWorld().removeObject(this);

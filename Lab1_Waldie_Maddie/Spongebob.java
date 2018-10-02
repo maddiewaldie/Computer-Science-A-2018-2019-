@@ -17,6 +17,7 @@ public class Spongebob extends Actor
     private int timeSecs;
     private boolean bootAdded;
     private boolean canAdded;
+    private boolean karenAdded;
     
     // Unused variables (from beginning phases of game)
     /**
@@ -33,6 +34,7 @@ public class Spongebob extends Actor
        startingMoveRight = true;
        bootAdded = true;
        canAdded = true;
+       karenAdded = true;
        timer = 1800;
        timeSecs = 30;
    }
@@ -49,6 +51,7 @@ public class Spongebob extends Actor
             playerMoveSpongebob();
             addBoot();
             addCan();
+            addKaren();
         }
         
         // Have timer run
@@ -191,6 +194,26 @@ public class Spongebob extends Actor
         else if ((Jellyfish.score % 10 != 0) && (Jellyfish.score != 0) && canAdded && (Jellyfish.score > 0))
         {
             canAdded = false;
+        }
+    }
+    
+    /**
+     * Method: Add Karen to world if the score is a multiple of 20
+     */
+    private void addKaren()
+    {
+        // Create a new can
+        Karen karen = new Karen();
+        
+        // Add a can if needed
+        if((Jellyfish.score % 10 == 0) && (Jellyfish.score != 0) && !karenAdded && (Jellyfish.score > 0))
+        {
+            getWorld().addObject(karen, 788, 456);
+            karenAdded = true;
+        }
+        else if ((Jellyfish.score % 10 != 0) && (Jellyfish.score != 0) && karenAdded && (Jellyfish.score > 0))
+        {
+            karenAdded = false;
         }
     }
     
