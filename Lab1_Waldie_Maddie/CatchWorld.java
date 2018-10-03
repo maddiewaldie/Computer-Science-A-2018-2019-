@@ -50,7 +50,7 @@ public class CatchWorld extends World
     
     
     /**
-     * Method to add all ovbjects needed to the Catch World
+     * Method to add all objects needed to the Catch World
      */
     private void addObjects()
     {
