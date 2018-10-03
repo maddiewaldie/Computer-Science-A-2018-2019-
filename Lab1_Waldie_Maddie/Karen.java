@@ -36,7 +36,7 @@ public class Karen extends Actor
             startKaren = false;
         }
         
-        if (Jellyfish.timerDone == false)
+        if (Jellyfish.getTimerStatus() == false)
         {
             // Move the boot
             moveKaren(amountToMove);
@@ -50,7 +50,7 @@ public class Karen extends Actor
     }   
     
     /**
-     * Method: move Karen around the world
+     * Method moveKaren: This moves Karen around the world
      */
     private void moveKaren(int amntToMove)
     {
@@ -58,14 +58,14 @@ public class Karen extends Actor
     }
     
     /**
-     * Method: take away points if Karen touches the spongebob class
+     * Method takeAwayPoints: This takes away points if Karen touches the spongebob class
      */
     private void takeAwayPoints()
     {
         if (isTouching(Spongebob.class))
         {
             // Decrement the score
-            Jellyfish.score -= 15;
+            Jellyfish.setScore(-15);
             
             // Remove boot
             getWorld().removeObject(this);
@@ -73,7 +73,7 @@ public class Karen extends Actor
     }
     
     /**
-     * Method: if karen touches the edge, it bounce back and go the other direction
+     * Method edgeTouch: If karen touches the edge, it bounce back and go the other direction
      */
     private void edgeTouch()
     {

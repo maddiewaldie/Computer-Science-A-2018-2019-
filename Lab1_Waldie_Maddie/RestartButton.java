@@ -20,7 +20,7 @@ public class RestartButton extends Actor
     }    
     
     /**
-     * Method: if the user clicks the button, the world will be set to CatchWorld.
+     * Method mouseClick: if the user clicks the button, the world will be set to CatchWorld.
      */
     private void mouseClick()
     {
@@ -32,8 +32,8 @@ public class RestartButton extends Actor
            Greenfoot.setWorld(c);
            
            // Reset the timer and score
-           Spongebob.timer = 1800;
-           Jellyfish.score = 0;
+           Spongebob.setTimer(1800);
+           Jellyfish.resetScore();
        }
     }
 }

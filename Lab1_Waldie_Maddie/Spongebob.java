@@ -13,7 +13,7 @@ public class Spongebob extends Actor
     private boolean pMoveSpongebob;
     private boolean startingMoveLeft;
     private boolean startingMoveRight;
-    public static int timer;
+    private static int timer;
     private int timeSecs;
     private boolean bootAdded;
     private boolean canAdded;
@@ -62,12 +62,13 @@ public class Spongebob extends Actor
         moveAround();
         turnAtEdge();
         randomTurn();
+        userControlledTurn();
         lookForCatch();
          */
     }
     
     /**
-     * Method: Keep track of how much time (in seconds) has passed in the game.
+     * Method timer: Keep track of how much time (in seconds) has passed in the game.
      */
     private void timer()
     {
@@ -81,13 +82,29 @@ public class Spongebob extends Actor
             if(timer == 0)
             {
                 pMoveSpongebob = false;
-                Jellyfish.timerDone = true;
+                Jellyfish.setTimerStatus(true);
             }
         }
     }
+    
+    /**
+     * Method getTimer: Get how much time is left on the timer.
+     */
+    public static int getTimer()
+    {
+        return(timer);
+    }
+    
+    /**
+     * Method setTimer: Het how much time is left on the timer.
+     */
+    public static void setTimer(int time)
+    {
+        timer = time;
+    }
 
     /**
-     * Method: Move Spongebob left
+     * Method moveLeft: Move Spongebob left
      */
     private void moveLeft(int amountToMove)
     {
@@ -95,7 +112,7 @@ public class Spongebob extends Actor
     }
 
     /**
-     * Method: Move Spongebob right
+     * Method moveRight: Move Spongebob right
      */
     private void moveRight(int amountToMove)
     {
@@ -103,7 +120,7 @@ public class Spongebob extends Actor
     }
 
     /**
-     * Method: Move Spongebob up
+     * Method moveUp: Move Spongebob up
      */
     private void moveUp(int amountToMove)
     {
@@ -111,7 +128,7 @@ public class Spongebob extends Actor
     }
 
     /**
-     * Method: Move Spongebob down
+     * Method moveDown: Move Spongebob down
      */
     private void moveDown(int amountToMove)
     {
@@ -119,7 +136,7 @@ public class Spongebob extends Actor
     }
 
     /**
-     * Method: Move spongebob using arrow keys on keyboard
+     * Method playerMoveSpongebob: Move spongebob using arrow keys on keyboard
      */
     private void playerMoveSpongebob()
     {
@@ -158,7 +175,7 @@ public class Spongebob extends Actor
     }
     
     /**
-     * Method: Add boot to world if the score is a multiple of 5
+     * Method addBoot: Add boot to world if the score is a multiple of 5
      */
     private void addBoot()
     {
@@ -166,19 +183,19 @@ public class Spongebob extends Actor
         Boot boot = new Boot();
         
         // Add a boot if needed
-        if((Jellyfish.score % 5 == 0) && (Jellyfish.score != 0) && !bootAdded && (Jellyfish.score > 0))
+        if((Jellyfish.getScore() % 5 == 0) && (Jellyfish.getScore() != 0) && !bootAdded && (Jellyfish.getScore() > 0))
         {
             getWorld().addObject(boot, Greenfoot.getRandomNumber(780), Greenfoot.getRandomNumber(300));
             bootAdded = true;
         }
-        else if ((Jellyfish.score % 5 != 0) && (Jellyfish.score != 0) && bootAdded && (Jellyfish.score > 0))
+        else if ((Jellyfish.getScore() % 5 != 0) && (Jellyfish.getScore() != 0) && bootAdded && (Jellyfish.getScore() > 0))
         {
             bootAdded = false;
         }
     }
     
     /**
-     * Method: Add can to world if the score is a multiple of 10
+     * Method addCan: Add can to world if the score is a multiple of 10
      */
     private void addCan()
     {
@@ -186,19 +203,19 @@ public class Spongebob extends Actor
         Can can = new Can();
         
         // Add a can if needed
-        if((Jellyfish.score % 10 == 0) && (Jellyfish.score != 0) && !canAdded && (Jellyfish.score > 0))
+        if((Jellyfish.getScore() % 10 == 0) && (Jellyfish.getScore() != 0) && !canAdded && (Jellyfish.getScore() > 0))
         {
             getWorld().addObject(can, Greenfoot.getRandomNumber(780), Greenfoot.getRandomNumber(300));
             canAdded = true;
         }
-        else if ((Jellyfish.score % 10 != 0) && (Jellyfish.score != 0) && canAdded && (Jellyfish.score > 0))
+        else if ((Jellyfish.getScore() % 10 != 0) && (Jellyfish.getScore() != 0) && canAdded && (Jellyfish.getScore() > 0))
         {
             canAdded = false;
         }
     }
     
     /**
-     * Method: Add Karen to world if the score is a multiple of 20
+     * Method addKaren: Add Karen to world if the score is a multiple of 20
      */
     private void addKaren()
     {
@@ -206,12 +223,12 @@ public class Spongebob extends Actor
         Karen karen = new Karen();
         
         // Add a can if needed
-        if((Jellyfish.score % 10 == 0) && (Jellyfish.score != 0) && !karenAdded && (Jellyfish.score > 0))
+        if((Jellyfish.getScore() % 10 == 0) && (Jellyfish.getScore() != 0) && !karenAdded && (Jellyfish.getScore() > 0))
         {
             getWorld().addObject(karen, 788, 456);
             karenAdded = true;
         }
-        else if ((Jellyfish.score % 10 != 0) && (Jellyfish.score != 0) && karenAdded && (Jellyfish.score > 0))
+        else if ((Jellyfish.getScore() % 10 != 0) && (Jellyfish.getScore() != 0) && karenAdded && (Jellyfish.getScore() > 0))
         {
             karenAdded = false;
         }
@@ -220,7 +237,7 @@ public class Spongebob extends Actor
     // Unused methods (from beginning phases of game)
     
     /**
-     * Method: move around the world
+     * Method moveAround: move around the world
      */
     private void moveAround()
     {
@@ -228,7 +245,7 @@ public class Spongebob extends Actor
     }
     
     /**
-     * Method: turn Spongebob 90º if it is at the edge of the world
+     * Method turnAtEdge: turn Spongebob 90º if it is at the edge of the world
      */
     private void turnAtEdge()
     {
@@ -260,4 +277,31 @@ public class Spongebob extends Actor
         }
     }
     
+    /**
+     * Method: Have user control Spongebob's turns. The character can either move left or right
+     */
+    private void userControlledTurn()
+    {
+        if(Greenfoot.isKeyDown("left")) 
+        {
+            moveLeft(-2);
+            if(!startingMoveLeft)
+            {
+                getImage().mirrorHorizontally();
+                startingMoveLeft = true;
+                startingMoveRight = false;
+            }
+        }
+        // Move right with right arrow key
+        else if(Greenfoot.isKeyDown("right"))
+        {
+            moveRight(2);
+            if(!startingMoveRight)
+            {
+                getImage().mirrorHorizontally();
+                startingMoveRight = true;
+                startingMoveLeft = false;
+            }
+        }
+    }
 }

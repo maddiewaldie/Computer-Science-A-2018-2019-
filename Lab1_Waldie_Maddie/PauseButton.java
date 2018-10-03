@@ -23,7 +23,7 @@ public class PauseButton extends Actor
     }   
 
     /**
-     * Method: if the user clicks the button, the world will be set to PauseScreen.
+     * Method mouseClick: if the user clicks the button, the world will be set to PauseScreen.
      */
     private void mouseClick()
     {
@@ -42,18 +42,18 @@ public class PauseButton extends Actor
     }   
     
     /**
-     * Method: Get and return the last score.
+     * Method getLastScore: Get and return the last score.
      */
     private int getLastScore()
     {
-        return(Jellyfish.score);
+        return(Jellyfish.getScore());
     }
     
     /**
-     * Method: Get and return the last time from the timer.
+     * Method getLastTime: Get and return the last time from the timer.
      */
     private int getLastTime()
     {
-        return(Spongebob.timer);
+        return(Spongebob.getTimer());
     }
 }

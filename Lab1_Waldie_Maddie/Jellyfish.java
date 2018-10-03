@@ -13,11 +13,11 @@ public class Jellyfish extends Actor
     // Variable instantiation
     private boolean startGame;
     private int randomNumber;
-    public static int score;
+    private static int score;
     private int jellyType;
     private int x;
     private int y;
-    public static boolean timerDone;
+    private static boolean timerDone;
 
     /**
      * Constructor for objects of class Jellyfish.
@@ -64,7 +64,54 @@ public class Jellyfish extends Actor
     }    
 
     /**
-     * Method: Flip the image of the left moving jellyfish. This makes them look like they're moving the right way.
+     * Method getTimerStatus: Returns whether or not the timer is done
+     */
+    public static boolean getTimerStatus()
+    {
+        return(timerDone);
+    }
+    
+    /**
+     * Method setTimerStatus: Sets timerDone to either true or false
+     */
+    public static void setTimerStatus(boolean isTrue)
+    {
+        if(isTrue)
+        {
+            timerDone = true;
+        }
+        else
+        {
+            timerDone = false;
+        }
+    }
+    
+    /**
+     * Method getScore: See what the current score is
+     */
+    public static int getScore()
+    {
+        return(score);
+    }
+    
+    /**
+     * Method setScore: Increase / decrease the score
+     */
+    public static void setScore(int amntToAdd)
+    {
+        score += amntToAdd;
+    }
+    
+    /**
+     * Method resetScore: Reset the score to 0
+     */
+    public static void resetScore()
+    {
+        score = 0;
+    }
+    
+    /**
+     * Method flipLeftJellyfish: Flip the image of the left moving jellyfish. This makes them look like they're moving the right way.
      */
     private void flipLeftJellyfish()
     {
@@ -77,7 +124,7 @@ public class Jellyfish extends Actor
     }
 
     /**
-     * Method: Move some of the jellyfish to the right
+     * Method moveJellyfishRight: Move some of the jellyfish to the right
      */
     private void moveJellyfishRight()
     {
@@ -89,7 +136,7 @@ public class Jellyfish extends Actor
     }
 
     /**
-     * Method: Move some of the jellyfish to the left
+     * Method moveJellyfishLeft: Move some of the jellyfish to the left
      */
     private void moveJellyfishLeft()
     {
@@ -101,7 +148,7 @@ public class Jellyfish extends Actor
     }
 
     /**
-     * Method: Check if the jellyfish is touching the edge. If it is touching the edge, move to the opposite side of the screen at a random location.
+     * Method checkIfTouchingEdge: Check if the jellyfish is touching the edge. If it is touching the edge, move to the opposite side of the screen at a random location.
      */
     private void checkIfTouchingEdge()
     {
@@ -116,7 +163,7 @@ public class Jellyfish extends Actor
     }
 
     /**
-     * Method: Update the score if a jellyfish is caught
+     * Method updateScore: Update the score if a jellyfish is caught
      */
     private void updateScore()
     {
@@ -141,7 +188,7 @@ public class Jellyfish extends Actor
     }
 
     /**
-     * Method: Stop moving the jellyfish
+     * Method stopMoving: Stop moving the jellyfish
      */
     public void stopMoving()
     {
@@ -150,7 +197,7 @@ public class Jellyfish extends Actor
     }
     
     /**
-     * Method: Show the EndGameScreen if the game is over.
+     * Method addAfterGameButtons: Show the EndGameScreen if the game is over.
      */
     private void addAfterGameButtons()
     

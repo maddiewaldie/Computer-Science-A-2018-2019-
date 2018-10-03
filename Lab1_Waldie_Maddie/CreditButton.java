@@ -19,7 +19,7 @@ public class CreditButton extends Actor
     } 
     
     /**
-     * Method: if the user clicks the button, the world will be set to CreditScreen.
+     * Method mouseClick: if the user clicks the button, the world will be set to CreditScreen.
      */
     private void mouseClick()
     {

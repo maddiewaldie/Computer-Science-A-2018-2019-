@@ -20,7 +20,7 @@ public class ResumeButton extends Actor
     }  
     
     /**
-     * Method: if the user clicks the button, the world will be set to CatchWorld.
+     * Method mouseClick: if the user clicks the button, the world will be set to CatchWorld.
      */
     private void mouseClick()
     {
@@ -32,8 +32,8 @@ public class ResumeButton extends Actor
            Greenfoot.setWorld(c);
            
            // Make sure the timer and score are how they were before the game was paused.
-           Spongebob.timer = PauseButton.lastTime;
-           Jellyfish.score = PauseButton.lastScore;
+           Spongebob.setTimer(PauseButton.lastTime);
+           Jellyfish.setScore(PauseButton.lastScore);
            
        }
     }

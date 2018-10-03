@@ -19,7 +19,7 @@ public class MenuButton extends Actor
     }
     
     /**
-     * Method: if the user clicks the button, the world will be set to WelcomeScreen.
+     * Method mouseClick: if the user clicks the button, the world will be set to WelcomeScreen.
      */
     private void mouseClick()
     {

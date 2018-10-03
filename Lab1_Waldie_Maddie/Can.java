@@ -15,7 +15,7 @@ public class Can extends Actor
     public void act() 
     {
         // As long as the game is still running, these things will be called
-        if (Jellyfish.timerDone == false)
+        if (Jellyfish.getTimerStatus() == false)
         {
             // Move the boot
             moveCan(5);
@@ -32,7 +32,7 @@ public class Can extends Actor
     }   
     
     /**
-     * Method: move the boot around the world
+     * Method moveCan: move the boot around the world
      */
     private void moveCan(int amntToMove)
     {
@@ -40,7 +40,7 @@ public class Can extends Actor
     }
     
     /**
-     * Method: randomly turn the boot
+     * Method randomTurn: randomly turn the boot
      */
     private void randomTurn(int amntToTurn)
     {
@@ -51,14 +51,14 @@ public class Can extends Actor
     }
     
     /**
-     * Method: take away points if the boot touches the spongebob class
+     * Method takeAwayPoints: take away points if the boot touches the spongebob class
      */
     private void takeAwayPoints()
     {
         if (isTouching(Spongebob.class))
         {
             // Decrement the score
-            Jellyfish.score -= 5;
+            Jellyfish.setScore(-5);
             
             // Remove can
             getWorld().removeObject(this);
@@ -66,7 +66,7 @@ public class Can extends Actor
     }
     
     /**
-     * Method: if the boot touches the edge, it will turn away
+     * Method edgeTouch: if the boot touches the edge, it will turn away
      */
     private void edgeTouch()
     {

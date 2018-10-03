@@ -52,6 +52,6 @@ public class EndGameScreen extends World
      */
     private int getLastScore()
     {
-        return(Jellyfish.score);
+        return(Jellyfish.getScore());
     }
 }

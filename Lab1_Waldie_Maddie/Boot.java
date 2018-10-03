@@ -16,7 +16,7 @@ public class Boot extends Actor
     public void act() 
     {
         // As long as the game is still running, these things will be called
-        if (Jellyfish.timerDone == false)
+        if (Jellyfish.getTimerStatus() == false)
         {
             // Move the boot
             moveBoot(5);
@@ -33,7 +33,7 @@ public class Boot extends Actor
     }   
     
     /**
-     * Method: move the boot around the world
+     * Method moveBoot: move the boot around the world
      */
     private void moveBoot(int amntToMove)
     {
@@ -41,7 +41,7 @@ public class Boot extends Actor
     }
     
     /**
-     * Method: randomly turn the boot
+     * Method randomTurn: randomly turn the boot
      */
     private void randomTurn(int amntToTurn)
     {
@@ -52,14 +52,14 @@ public class Boot extends Actor
     }
     
     /**
-     * Method: take away points if the boot touches the spongebob class
+     * Method takeAwayPoints: take away points if the boot touches the spongebob class
      */
     private void takeAwayPoints()
     {
         if (isTouching(Spongebob.class))
         {
             // Decrement the score
-            Jellyfish.score -= 2;
+            Jellyfish.setScore(-2);
             
             // Remove boot
             getWorld().removeObject(this);
@@ -67,7 +67,7 @@ public class Boot extends Actor
     }
     
     /**
-     * Method: if the boot touches the edge, it will turn away
+     * Method edgeTouch: if the boot touches the edge, it will turn away
      */
     private void edgeTouch()
     {

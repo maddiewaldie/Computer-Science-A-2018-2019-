@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class WelcomeScreen extends World
 {
-
     StartButton start = new StartButton();
     CreditButton credits = new CreditButton();
     GameTitle title = new GameTitle();
