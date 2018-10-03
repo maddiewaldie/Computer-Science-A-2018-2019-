@@ -23,18 +23,38 @@ Spongebob is taking the day off of work and wants to spend a relaxing day jellyf
   * Use the right arrow key on the keyboard to move Spongebob up.
   * When Spongebob moves towards the right side of the screen, he will face the right direction.
 
+### Screens
+
+#### Main Menu
+
+When you first open the game, you will see the `Main Menu`. From this screen, you can either start the game or go to the credits. To do this, click on either the `Start` or `Credits` button.
+
+#### Credit Screen
+
+#### Main Game Screen
+
+#### Pause Screen
+
+#### End of Game Screen
+
+### How to Gain Points
+
+In this game, depending on what object SpongeBob catches, the player will either gain or loose a certain amount of points.
+
+Spongebob wants to catch jellyfish, so if you catch them, you will gain points. However, Spongebob doesn't want to catch any trash, like boots and cans. Make sure you avoid them, because you'll loose points. Also, watch out for Karen! She and Plankton always try to sabotage Spongebob's fun, and if you accidentially run into her, you will loose the most points.
+
 ### Point Break Down
 
-In this game, depending on what object SpongeBob catches, the player will either gain or loose a certain amount of points. Spongebob wants to catch jellyfish, so if you catch them, you will gain points. However, Spongebob doesn't want to catch any trash, like boots and cans. Make sure you avoid them! Also, watch out for Karen! She and Plankton always try to sabotage Spongebob's fun.
+Below, you can see the point breakdown for the game.
 
 | Object Caught | Points Gained / Lost |
 |---------------|----------------------|
 | Jellyfish     | + 1 point            |
 | Boot          | - 2 points           |
 | Can           | - 5 points           |
-| Karen         | - 10 points          |
+| Karen         | - 15 points          |
 
 ## About
 
 * Author: Madeleine Waldie
-* Last Updated: October 1, 2018
+* Last Updated: October 3, 2018
