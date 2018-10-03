@@ -126,7 +126,7 @@ public class Jellyfish extends Actor
         // Add points
         if (isTouching(Spongebob.class))
         {
-            score += 2;
+            score += 1;
             if(jellyType == 1) {
                 setLocation(-100, randomNumber);
             }
