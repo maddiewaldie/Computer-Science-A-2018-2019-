@@ -9,7 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class WelcomeScreen extends World
 {
     StartButton start = new StartButton();
-    CreditButton credits = new CreditButton();
     GameTitle title = new GameTitle();
     
     /**
@@ -22,8 +21,7 @@ public class WelcomeScreen extends World
         
         // Add objects
         addObject(title, 400, 223);
-        addObject(start, 252, 491);
-        addObject(credits, 531, 491);
+        addObject(start, 396, 491);
         
     }
 }

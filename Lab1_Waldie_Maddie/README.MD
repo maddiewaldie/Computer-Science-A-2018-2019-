@@ -56,5 +56,5 @@ Below, you can see the point breakdown for the game.
 
 ## About
 
-* Author: Madeleine Waldie
-* Last Updated: October 3, 2018
+* **Author:** Madeleine Waldie
+* **Last Updated:** October 3, 2018
