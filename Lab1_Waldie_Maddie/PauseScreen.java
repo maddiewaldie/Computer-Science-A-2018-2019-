@@ -11,6 +11,7 @@ public class PauseScreen extends World
     ResumeButton resume = new ResumeButton();
     RestartButton restart = new RestartButton();
     MenuButton menu = new MenuButton();
+    GameTitle title = new GameTitle();
    
     /**
      * Constructor for objects of class PauseScreen.
@@ -21,6 +22,7 @@ public class PauseScreen extends World
         super(792, 589, 1); 
         
         // Add objects
+        addObject(title, 400, 223);
         addObject(resume, 200, 491);
         addObject(menu, 400, 491);
         addObject(restart, 600, 491);
