@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=ArrayAlgorithms
+comment0.text=\n\ Write\ a\ description\ of\ class\ ArrayAlgorithms\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=arr
+comment1.target=int\ findMax(int[])
+comment1.text=\n\ find\ the\ maximum\ value\ within\ the\ array\n\ precondition\:\ arr.length>0\n\ @param\ int[]\ arr-\ the\ array\ to\ find\ the\ max\ of\n\ @return\ int\ -\ the\ maximum\ value\ from\ the\ array\n
+comment2.params=arr
+comment2.target=int\ findSum(int[])
+comment2.text=\n\ calculate\ and\ return\ the\ sum\ of\ the\ values\ in\ the\ array\n\ precondition\:\ arr.length>0\n\ @param\ int[]\ arr-\ the\ array\ to\ find\ the\ sum\ of\n\ @return\ int\ -\ the\ sum\ of\ all\ values\ from\ the\ array\n
+comment3.params=arr
+comment3.target=boolean\ isIncreasing(int[])
+comment3.text=\n\ determine\ if\ all\ the\ values\ in\ the\ array\ are\ increasing\ from\n\ the\ previous\ value.\ \ Increasing\ means\ the\ next\ value\ is\ great\n\ than\ the\ previous\ value.\n\ Return\ true\ if\ all\ the\ values\ are\ increasing\ and\ false\n\ otherwise\n\ precondition\:\ arr.length>1\n\ @param\ int[]\ arr-\ the\ array\ to\ use\n\ @return\ boolean\ -\ true\ if\ all\ the\ values\ are\ increasing,\n\ false\ otherwise\n
+comment4.params=arr
+comment4.target=double\ findAverage(int[])
+comment4.text=\n\ calculate\ and\ return\ the\ avearage\ of\ the\ values\ in\ the\ array\n\ precondition\:\ arr.length>0\n\ @param\ int[]\ arr-\ the\ array\ to\ find\ the\ average\ of\n\ @return\ double\ -\ the\ average\ of\ all\ values\ from\ the\ array\n
+comment5.params=arr
+comment5.target=boolean\ allEven(int[])
+comment5.text=\n\ determine\ if\ all\ the\ values\ in\ the\ array\ are\ even.\n\ Return\ true\ if\ all\ the\ values\ are\ even\ and\ false\n\ otherwise\n\ precondition\:\ arr.length>0\n\ @param\ int[]\ arr-\ the\ array\ to\ use\n\ @return\ boolean\ -\ true\ if\ all\ the\ values\ are\ even,\n\ false\ otherwise\n
+comment6.params=arr1\ arr2
+comment6.target=boolean\ allMatch(int[],\ int[])
+comment6.text=\n\ determine\ if\ all\ the\ elements\ in\ the\ array's\ match\ each\ other\n\ e.g.\ the\ two\ arrays\ are\ equal\n\ Return\ true\ if\ all\ the\ values\ match\ and\ false\n\ otherwise\n\ precondition\:\ arr.length>0\n\ @param\ int[]\ arr1,\ int[]\ arr2-\ the\ two\ arrays\ to\ compare\n\ @return\ boolean\ -\ true\ if\ all\ the\ values\ match,\n\ false\ otherwise\n
+numComments=7
