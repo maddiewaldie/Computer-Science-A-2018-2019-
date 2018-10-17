@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Robot
+comment0.text=\n\ Write\ a\ description\ of\ class\ Robot\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=h\ p\ fr
+comment1.target=Robot(int[],\ int,\ boolean)
+comment2.params=
+comment2.target=boolean\ forwardMoveBlocked()
+comment2.text=\n\ postcondition\:\ returns\ true\ if\ this\ Robot\ has\ a\ wall\ immediately\ in\n\ front\ of\ it,\ so\ that\ it\ cannot\ move\ forward;\n\ otherwise,\ returns\ false\n
+comment3.params=
+comment3.target=void\ move()
+comment3.text=\n\ postcondition\:\ one\ move\ has\ been\ made\ according\ to\ the\n\ specification\ above\ and\ the\ state\ of\ this\n\ Robot\ has\ been\ updated\n
+comment4.params=
+comment4.target=int\ clearHall()
+comment4.text=\n\ postcondition\:\ no\ more\ items\ remain\ in\ the\ hallway;\n\ returns\ the\ number\ of\ moves\ made\n
+comment5.params=
+comment5.target=boolean\ hallIsClear()
+comment5.text=\n\ postcondition\:\ returns\ true\ if\ the\ hallway\ contains\ no\ items;\n\ otherwise\ returns\ false\n
+comment6.params=
+comment6.target=int[]\ getHall()
+comment7.params=
+comment7.target=boolean\ getDirection()
+comment8.params=
+comment8.target=int\ getPosition()
+numComments=9

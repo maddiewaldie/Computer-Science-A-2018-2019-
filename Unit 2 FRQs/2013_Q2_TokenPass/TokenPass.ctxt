@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=TokenPass
+comment0.text=\n\ Write\ a\ description\ of\ class\ TokenPass\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=playerCount
+comment1.target=TokenPass(int)
+comment1.text=\n\ Creates\ the\ board\ array\ to\ be\ of\ size\ playerCount\ and\ fills\ it\ with\n\ random\ integer\ values\ from\ 1\ to\ 10,\ inclusive.\ \ Initializes\ currentPlayer\ to\ a\n\ random\ integer\ value\ in\ the\ range\ between\ 0\ and\ playerCount-1,\ inclusive.\n\ @param\ playerCount\ the\ number\ of\ players\n
+comment2.params=
+comment2.target=void\ distributeCurrentPlayerTokens()
+comment2.text=\n\ Distribues\ the\ tokens\ from\ the\ current\ player's\ position\ one\ at\ a\ time\ to\ each\n\ player\ in\ the\ game.\ \ Distribution\ with\ the\ next\ position\ and\ \n\ continues\ until\ all\ the\ token\ have\ been\ distributed.\ \ If\ there\ \n\ are\ still\ tokens\ to\ distribute\ when\ the\ player\ at\ the\ highest\n\ position\ is\ reached,\ the\ next\ token\ will\ be\ distributed\ to\ the\ player\n\ at\ position\ 0.\n\ Precondition\:\ the\ current\ player\ has\ at\ least\ one\ token.\n\ Postcondition\:\ the\ current\ player\ has\ not\ changed.\n
+comment3.params=
+comment3.target=int[]\ getBoard()
+comment4.params=
+comment4.target=int\ getCurrentPlayer()
+comment5.params=cp\ b
+comment5.target=TokenPass(int,\ int[])
+numComments=6
