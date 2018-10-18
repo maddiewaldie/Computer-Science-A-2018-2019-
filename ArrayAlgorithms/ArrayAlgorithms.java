@@ -19,9 +19,19 @@ public class ArrayAlgorithms
      */
     public int findMax(int[] arr)
     {
+        // create max variable
+        int max = arr[0];
         
-        //placeholder return
-        return 0;
+        for(int i = 0; i < arr.length; i++)
+        {
+            if(arr[i] > max)
+            {
+                max = arr[i];
+            }
+        }
+        
+        // return the maximim value in arr
+        return(max);
     }
     
     /**
@@ -32,9 +42,16 @@ public class ArrayAlgorithms
      */
     public int findSum(int[] arr)
     {
+        // create sum variable
+        int sum = 0;
         
-        //placeholder return
-        return 0;
+        for(int i = 0; i < arr.length; i++)
+        {
+            sum += arr[i];
+        }
+        
+        // return sum of values in arr
+        return (sum);
     }
     
     /**
@@ -50,9 +67,24 @@ public class ArrayAlgorithms
      */
     public boolean isIncreasing(int[] arr)
     {
+        // create variable for last value in the array
+        int lastValue = arr[0];
         
-        //placeholder return
-        return false;
+        for (int i = 1; i < arr.length; i++)
+        {
+            if(arr[i] > lastValue)
+            {
+                lastValue = arr[i];
+            }
+            else
+            {
+                // return false if the values are not increasing
+                return(false);
+            }
+        }
+        
+        // return true as long as the values are increasing
+        return (true);
     }
     /**
      * calculate and return the avearage of the values in the array
@@ -62,9 +94,20 @@ public class ArrayAlgorithms
      */
     public double findAverage(int[] arr)
     {
+        // create sum and average variables
+        double sum = 0.0;
+        double average;
         
-        //placeholder return
-        return 0;
+        for(int i = 0; i < arr.length; i++)
+        {
+            sum += arr[i];
+        }
+        
+        // Set average
+        average = sum/((double) arr.length);
+        
+        // Return average of all values in arr
+        return(average);
     }
     
     /**
@@ -78,9 +121,17 @@ public class ArrayAlgorithms
      */
     public boolean allEven(int[] arr)
     {
+        for(int i = 0; i < arr.length; i++)
+        {
+            if(arr[i]%2 == 1)
+            {
+                // return false only if values in arr are odd
+                return(false);
+            }
+        }
         
-        //placeholder return
-        return false;
+        // return true only if values in arr are even
+        return true;
     }
     
     /**
@@ -95,8 +146,23 @@ public class ArrayAlgorithms
      */
     public boolean allMatch(int[] arr1, int[] arr2)
     {
-        
-        //placeholder return
-        return false;
+        if(arr1.length == arr2.length)
+        {
+            for(int i = 0; i < arr1.length; i++)
+            {
+                if(arr1[i] != arr2[i])
+                {
+                    // return false if values do not match
+                    return(false);
+                }
+            }
+            // return true if values do  match
+            return(true);
+        }
+        else
+        {
+            // return false if array lengths are not equal
+            return(false);
+        }
     }
 }
