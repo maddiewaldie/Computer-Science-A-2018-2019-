@@ -2,6 +2,8 @@
 
 ## Puropse of Project
 
+The purpose of `ArrayAlgorithms` is to practice using arrays.
+
 ## How to Start Project
 
 1. Make sure you have cloned the GitHub repository and have pulled the most recent code.
