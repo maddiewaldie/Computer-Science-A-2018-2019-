@@ -2,8 +2,8 @@
 /**
  * Write a description of class StudentRecord here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Maddie
+ * @version October 22, 2018
  */
 public class StudentRecord
 {
@@ -33,7 +33,7 @@ public class StudentRecord
         }
 
         // Set average
-        average = sum/(last - first);
+        average = sum/((double)last - (double)first);
 
         // Return average of all values in scores
         return(average);

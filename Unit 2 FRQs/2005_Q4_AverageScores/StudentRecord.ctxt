@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=StudentRecord
-comment0.text=\n\ Write\ a\ description\ of\ class\ StudentRecord\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ StudentRecord\ here.\n\n\ @author\ Maddie\n\ @version\ October\ 22,\ 2018\n
 comment1.params=s
 comment1.target=StudentRecord(int[])
 comment2.params=first\ last

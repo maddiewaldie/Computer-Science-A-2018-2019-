@@ -15,6 +15,11 @@ The purpose of `ArrayAlgorithms` is to practice using arrays.
 
 ## User Instructions
 
+Follow these steps to test the Array Algorithms:
+
+1. Right click on `Unit Tester`
+2. Select `Test All`.
+
 ## About
 
 * **Authors:** Madeleine Waldie, Shobha Srinivasan, Lily Johnson, and Kerensa Fu
