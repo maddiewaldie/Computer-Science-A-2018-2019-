@@ -67,12 +67,20 @@ public class Robot
      */
     public int clearHall()
     {
+        // initialize counter variable
         int counter = 0;
-        for (int i = 0; !hallIsClear(); i++)
+        
+        // as long as there are objects in the hallway, it will run through the loop
+        while (!hallIsClear())
         {
+            // move robot
             move();
+            
+            // increase counter
             counter++;
         }
+        
+        // once the hall is clear, return the number of moves made
         return counter;
     }
 
