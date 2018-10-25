@@ -23,4 +23,4 @@ Follow these steps to test the Array Algorithms:
 ## About
 
 * **Authors:** Madeleine Waldie, Shobha Srinivasan, Lily Johnson, and Kerensa Fu
-* ** Version:** October 18, 2018
+* **Version:** October 18, 2018
