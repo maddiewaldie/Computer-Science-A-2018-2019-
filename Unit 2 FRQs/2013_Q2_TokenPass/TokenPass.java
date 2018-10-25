@@ -9,7 +9,7 @@ public class TokenPass
 {
     private int[] board;
     private int currentPlayer;
-    
+
     /**
      * Creates the board array to be of size playerCount and fills it with
      * random integer values from 1 to 10, inclusive.  Initializes currentPlayer to a
@@ -18,9 +18,20 @@ public class TokenPass
      */
     public TokenPass(int playerCount)
     {
-        /* to be implemented in part (a) */
+        // set the size of the board
+        board = new int[playerCount];
+        
+        // as long as the amount of players is greater than the counter, it will go through the for loop
+        for (int i = 0; i < playerCount; i++)
+        {
+            // Put values into the board - need ro cast a double to an int
+            board[i] = (int)(10 * Math.random()) + 1;
+        }
+        
+        // initialize the current player - need to cast a double to an int
+        currentPlayer = (int)(playerCount * Math.random());
     }
-    
+
     /**
      * Distribues the tokens from the current player's position one at a time to each
      * player in the game.  Distribution with the next position and 
@@ -33,18 +44,27 @@ public class TokenPass
      */
     public void distributeCurrentPlayerTokens()
     {
-        /* to be implemented in part (b) */
+        // initialize variables
+        int numberOfTokens = board[currentPlayer];
+        int i = currentPlayer;
+        
+        board[currentPlayer] = 0;
+        
+        // ss long as the player has enough tokens, the loop will continue
+        while (numberOfTokens > 0)
+        {
+            i = (i+1) % board.length;
+            board[i]++;
+            numberOfTokens--;
+        }
     }
-    
-    //There may be instance variables, constructors, and methodes that are 
-    //not shown.
-    
     
     //methods used for testing - do not alter
     public int[] getBoard()
     {
         return board;
     }
+
     public int getCurrentPlayer()
     {
         return currentPlayer;
