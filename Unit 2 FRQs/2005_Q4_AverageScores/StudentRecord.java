@@ -23,20 +23,16 @@ public class StudentRecord
      */
     public double average(int first, int last)
     {
-        // create sum and average variables
-        double sum = 0.0;
-        double average = 0.0;
-
-        for(int i = first; i < last; i++)
+        // create variable for sum
+        double sum = 0;
+        
+        for (int i = first; i <= last; i++)
         {
             sum += scores[i];
         }
-
-        // Set average
-        average = sum/((double)last - (double)first);
-
-        // Return average of all values in scores
-        return(average);
+        
+        // return the average
+        return sum / (last - first + 1);
     }
 
     /**
@@ -77,13 +73,13 @@ public class StudentRecord
         double sum = 0.0;
         double average = 0.0;
 
-        if(hasImproved())
+        if(!hasImproved())
         {
-            return(average(scores.length/2, scores.length));
+            return(average(0, scores.length - 1));
         }
         else
         {
-            return(average(0, scores.length));
+            return(average(scores.length / 2, scores.length - 1));
         }
     }
 }
