@@ -1,7 +1,7 @@
 /**
  * Athlete class
- * Author: Madeleine Waldie
- * Last Updated: November 13, 2018
+ * @author Madeleine Waldie
+ * @version November 13, 2018
  */
 
 public class Athlete
