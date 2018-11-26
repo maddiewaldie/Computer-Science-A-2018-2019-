@@ -22,16 +22,21 @@ public class Company
      * retire; otherwise returns false.*/
     public boolean employeeIsEligible( Employee e )
     {
-        //to be implemented in part a
-        /*
-        Write the employeeIsEligible method if he/she meets at least two of the following requirements:
-        - The employee is at least retireAge years old
-        - The employee has worked for at least retireYears
-        - The employee’s salary is at least retireSalary
-        The employeeIsEligible returns true if they are eligible to retire or 
-        false if they are not eligible.
-        */
+       boolean condition1;
+       boolean condition2;
+       boolean condition3;
+       condition1 = ((e.getAge() >= retireAge) && (e.getYearsOnJob() >= retireYears));
+       condition2 = ((e.getAge() >= retireAge) && (e.getSalary() >= retireSalary));
+       condition3 = ((e.getYearsOnJob() >= retireYears) && (e.getSalary() >= retireSalary));
        
+       if(condition1 || condition2 || condition3)
+       {
+           return(true);
+       }
+       else
+       {
+           return(false);
+       }
     }
 
     /**
