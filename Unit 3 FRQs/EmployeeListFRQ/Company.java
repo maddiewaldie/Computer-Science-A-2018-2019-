@@ -9,7 +9,9 @@ public class Company
     private int retireYears;
     private double retireSalary;
     private int numRetireEligible;
+    private int x;
     private Employee[] empList;
+    private Employee[] tempList;
 
     //constructor not shown in FRQ
     //implementation for testing - do not alter
@@ -19,6 +21,7 @@ public class Company
         retireYears = ry;
         retireSalary = rs;
         empList = emps;
+        tempList = new Employee[1];
     }
 
     //methods
@@ -50,15 +53,14 @@ public class Company
      * retirement.*/
     public void updateNumRetireEligible( )
     {
-        //to be implemented in part b
-        /*
-        Write the method updateNumRetireEligible.  This method should also update the 
-        field numRetireEligible to reflect the total number of employees that are eligible 
-        for retirement.  It should not return anything, but rather just update the field 
-        based on the conditions of retirement eligibility and the array of employees.  
-        You may use your method written in part A, assuming it works as described by the 
-        postcondition.*/
-        
+     numRetireEligible = 0;
+        for(int i = 0; i < empList.length; i++)
+        {
+            if(employeeIsEligible(empList[i]))
+            {
+                numRetireEligible ++;
+            }
+        }
     }
     /**
      * postcondition: all retirement-eligible employees have been
@@ -66,14 +68,16 @@ public class Company
      * reflect non-retirements employees.*/
     public void processRetirement( )
     {
-        //to be implemented in part c
-        /*
-         Write the method processRetirement.  If an employee is eligible for retirement 
-         they should be removed from the array of employees.  You may need to make a 
-         temporary array to add those employees who cannot retire, determine the size of 
-         this array, and use this newly created array to set the old empList.  This method 
-         should not return anything, but rather update the empList array.
-         */
+        x = 0;
+        for(int i = 0; i < empList.length; i++)
+        {
+            if(!employeeIsEligible(empList[i]))
+            {
+                tempList[x] = empList[i];
+                x++;
+            }
+            empList = tempList;
+        }
         
     }
 
