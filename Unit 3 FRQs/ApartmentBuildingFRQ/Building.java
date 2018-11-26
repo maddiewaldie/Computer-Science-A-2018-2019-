@@ -1,3 +1,8 @@
+/**
+ * Building Class
+ * @author: Madeleine Waldie
+ * @version: November 26, 2018
+ */
 public abstract class Building
 {
     private final double RATE = 3.25;

@@ -1,5 +1,6 @@
 #BlueJ class context
 comment0.target=Employee
+comment0.text=\n\ Employee\ Class\n\ @author\:\ Madeleine\ Waldie\n\ @version\:\ November\ 26,\ 2018\n
 comment1.params=a\ years\ sal\ idNum
 comment1.target=Employee(int,\ int,\ double,\ int)
 comment2.params=

@@ -1,3 +1,8 @@
+/**
+ * Company Class
+ * @author: Madeleine Waldie
+ * @version: November 26, 2018
+ */
 public class Company
 {
     private int retireAge;

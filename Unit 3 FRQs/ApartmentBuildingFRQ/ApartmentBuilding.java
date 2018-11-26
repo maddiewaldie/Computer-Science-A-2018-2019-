@@ -1,9 +1,7 @@
-
 /**
- * Write a description of class ApartmentBuilding here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * Apartment Building Class
+ * @author: Madeleine Waldie
+ * @version: November 26, 2018
  */
 public class ApartmentBuilding extends Building
 {

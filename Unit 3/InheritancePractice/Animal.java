@@ -1,7 +1,7 @@
 /**
  * Animal Class
  * @author: Madeleine Waldie
- * @version: October 26, 2018
+ * @version: November 26, 2018
  */
 public abstract class Animal
 {
