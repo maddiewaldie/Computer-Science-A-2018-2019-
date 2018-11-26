@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Ticket
+comment1.params=
+comment1.target=Ticket()
+comment2.params=
+comment2.target=double\ getPrice()
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment4.params=
+comment4.target=int\ getNextSerialNumber()
+comment5.params=num
+comment5.target=void\ setSerialNumber(int)
+numComments=6

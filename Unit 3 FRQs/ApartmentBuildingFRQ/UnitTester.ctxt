@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=UnitTester
+comment0.text=\n\ Write\ a\ description\ of\ class\ UnitTests\ here.\n\n\ @author\ Melanie\ Duffin\n
+comment1.params=
+comment1.target=void\ testAddress()
+comment2.params=
+comment2.target=void\ testWattHours1()
+comment3.params=
+comment3.target=void\ testWattHours2()
+comment4.params=
+comment4.target=void\ testWattHours3()
+numComments=5

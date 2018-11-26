@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Company
+comment1.params=ra\ ry\ rs\ emps
+comment1.target=Company(int,\ int,\ int,\ Employee[])
+comment2.params=e
+comment2.target=boolean\ employeeIsEligible(Employee)
+comment2.text=\n\ postcondition\:\ returns\ true\ if\ an\ employee\ e\ is\ eligible\ to\nretire;\ otherwise\ returns\ false.
+comment3.params=
+comment3.target=void\ updateNumRetireEligible()
+comment3.text=\n\ postcondition\:\ updates\ the\ numRetireEligible\ field\ to\n\ the\ total\ number\ of\ employees\ that\ are\ eligible\ for\nretirement.
+comment4.params=
+comment4.target=void\ processRetirement()
+comment4.text=\n\ postcondition\:\ all\ retirement-eligible\ employees\ have\ been\n\ removed\ from\ empList\ and\ empList\ has\ the\ correct\ size\ to\nreflect\ non-retirements\ employees.
+comment5.params=
+comment5.target=int\ getNumRetireEligible()
+comment6.params=
+comment6.target=Employee[]\ getEmpList()
+numComments=7
