@@ -1,3 +1,8 @@
+/**
+ * Ticket Class
+ * @author: Madeleine Waldie
+ * @version: November 26, 2018 
+ */
 public abstract class Ticket
 {
     private int serialNumber;
