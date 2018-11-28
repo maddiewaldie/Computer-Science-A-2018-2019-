@@ -1,7 +1,7 @@
 /**
  * Company Class
  * @author: Madeleine Waldie
- * @version: November 26, 2018
+ * @version: November 28, 2018
  */
 public class Company
 {
@@ -21,7 +21,6 @@ public class Company
         retireYears = ry;
         retireSalary = rs;
         empList = emps;
-        tempList = new Employee[1];
     }
 
     //methods
@@ -68,7 +67,10 @@ public class Company
      * reflect non-retirements employees.*/
     public void processRetirement( )
     {
+        updateNumRetireEligible();
+        tempList = new Employee[empList.length - numRetireEligible];
         x = 0;
+        
         for(int i = 0; i < empList.length; i++)
         {
             if(!employeeIsEligible(empList[i]))
@@ -76,9 +78,8 @@ public class Company
                 tempList[x] = empList[i];
                 x++;
             }
-            empList = tempList;
         }
-        
+        empList = tempList;
     }
 
     
