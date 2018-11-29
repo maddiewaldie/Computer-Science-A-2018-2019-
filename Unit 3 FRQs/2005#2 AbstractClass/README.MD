@@ -1,12 +1,26 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
-------------------------------------------------------------------------
+# Abstract Class FRQ
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+## Puropse of Project
+
+The purpose of `AbstractClass` is to practice using the concepts learened in Unit 3.
+
+## How to Start Project
+
+1. Make sure you have cloned the GitHub repository and have pulled the most recent code.
+2. Open the `AbstractClass` project in BlueJ.
+3. If you have not downloaded Blue J, follow these instructions:
+    * Go to [this](https://www.bluej.org) link
+    * Select your Operating System, and the download should start
+    * Once the download finishes, open the `AbstractClass` project in Blue J
+
+## User Instructions
+
+In order to test your code, follow these instructions.
+
+1. Right click on `Unit Tester`
+2. Select `Test All`.
+
+## About
+
+* **Author:** Madeleine Waldie
+* **Version:** November 28, 2018

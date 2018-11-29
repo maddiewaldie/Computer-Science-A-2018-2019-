@@ -1,15 +1,26 @@
-ApartmentBuilding FRQ
+# Apartment Building FRQ
 
-To answer:
-An ApartmentBuilding is different from a regular building because instead of keeping track 
-of the watt hours used for the whole building, it needs to keep track of the watt hours used 
-by each of the individual apartments in the building.
+## Puropse of Project
 
-Write a complete declaration of class ApartmentBuilding including the following:
-A private field (an array) to be used to store the apartments’ watt hours.
-A constructor with two parameters: the address of the apartment building and the number of 
-apartments.  The constructor should initialize the building’s address field as well as 
-initializing the array to be big enough to store watt hours for each apartment in the building.
-An implementation of amtOwed that returns the amount of money owed by the entire building 
-for the electricity used (calculated by multiplying the sum of the wattHours for the entire 
-building by the RATE).
+The purpose of `ApartmentBuildingFRQ` is to practice using the concepts learened in Unit 3.
+
+## How to Start Project
+
+1. Make sure you have cloned the GitHub repository and have pulled the most recent code.
+2. Open the `ApartmentBuildingFRQ` project in BlueJ.
+3. If you have not downloaded Blue J, follow these instructions:
+    * Go to [this](https://www.bluej.org) link
+    * Select your Operating System, and the download should start
+    * Once the download finishes, open the `ApartmentBuildingFRQ` project in Blue J
+
+## User Instructions
+
+In order to test your code, follow these instructions.
+
+1. Right click on `Unit Tester`
+2. Select `Test All`.
+
+## About
+
+* **Author:** Madeleine Waldie
+* **Version:** November 28, 2018
