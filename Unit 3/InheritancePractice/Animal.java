@@ -1,19 +1,17 @@
 /**
  * Animal Class
  * @author: Madeleine Waldie
- * @version: November 26, 2018
+ * @version: November 30, 2018
  */
 public abstract class Animal
 {
-    public void sleep()
+    //regular methods
+    protected void sleep()
     {
         System.out.println("I am sleeping.... zzzzz");
     }
     
-    /**
-     * abstract method
-     * no code - only a method signature b/c will be overriden in subclass
-     */
-    public abstract void eat();
-    public abstract void play(double duration);
+    //abstract methods - no code - only a method signature b/c will be overriden in subclass
+    protected abstract void eat();
+    protected abstract void play(double duration);
 }

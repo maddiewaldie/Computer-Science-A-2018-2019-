@@ -1,7 +1,7 @@
 /**
  * Swimmer class
  * @author Madeleine Waldie
- * @version November 13, 2018
+ * @version November 30, 2018
  */
 
 public class Swimmer extends Athlete

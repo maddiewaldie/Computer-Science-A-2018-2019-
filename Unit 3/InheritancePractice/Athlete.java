@@ -1,7 +1,7 @@
 /**
  * Athlete class
  * @author Madeleine Waldie
- * @version November 13, 2018
+ * @version November 30, 2018
  */
 
 public class Athlete
@@ -26,7 +26,7 @@ public class Athlete
      * workout method
      * Change hours of practice, depending on how long the workout is
      */
-    public void workout(double howLong)
+    protected void workout(double howLong)
     {
         hoursPractice += howLong;
     }
@@ -35,7 +35,7 @@ public class Athlete
      * getHoursPractice method
      * Return how many hours the athlete practices
      */
-    public double getHoursPractice()
+    protected double getHoursPractice()
     {
         return(hoursPractice);
     }
@@ -44,7 +44,7 @@ public class Athlete
      * getInjury method
      * Return whether the athlete is injured
      */
-    public boolean getInjury()
+    protected boolean getInjury()
     {
         return(hasInjury);
     }
