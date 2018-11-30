@@ -14,11 +14,15 @@ public class AnimalDriver
         
         //polymorphism
         Animal myAnimal = new Dog(4.0);
-        AnimalSwimmer doggy = new Dog(8.0);
+        Pet doggy = new Dog(8.0);
         Pet goodBoy = new Dog(5.0);
         Pet fluffy = new Cat();
         Pet kitty = new Cat();
         myAnimal = new Cat();
+        
+        //arrays to group items
+        Cat[] myCats = {felix};
+        Pet[] myPets = {doggy, goodBoy, fluffy, kitty, snoopy, dog, felix};
         
         //call methods
         dog.eat();
