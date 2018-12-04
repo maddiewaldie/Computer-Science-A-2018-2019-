@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=BankAccount
+comment0.text=\n\ The\ BankAccount\ class\ represents\ one\ Bank\ Account\n\ held\ by\ a\ Bank\ customer.\ \ It\ has\ an\ account\ number\n\ and\ an\ account\ balance.\n\ \n\ @author\ (Melanie\ Duffin)\ \n
+comment1.params=act\ bal
+comment1.target=BankAccount(int,\ double)
+comment2.params=
+comment2.target=int\ getAccountNum()
+comment2.text=\n\ returns\ the\ account\ number\n
+comment3.params=
+comment3.target=double\ getBalance()
+comment3.text=\n\ returns\ the\ current\ balance\ -\ \n\ how\ much\ money\ is\ in\ the\ account\n
+comment4.params=amount
+comment4.target=void\ doDeposit(double)
+comment4.text=\n\ adds\ the\ given\ amount\ to\ the\ current\ balance\n
+comment5.params=amount
+comment5.target=void\ doWithdrawal(double)
+comment5.text=\n\ subtracts\ the\ given\ amount\ from\ the\ current\ balance\n
+numComments=6

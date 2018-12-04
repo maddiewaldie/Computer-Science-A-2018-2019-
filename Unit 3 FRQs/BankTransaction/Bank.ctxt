@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Bank
+comment0.text=\n\ @author\:\ (Your\ Name)\n\ @version\:\ (Date)\n\ BankTransaction\ FRQ\ work\n\ Use\ the\ FRQ\ question\ to\ work\ through\ the\ code\n\ for\ this\ FRQ.\n\ \n
+comment1.params=accts
+comment1.target=Bank(BankAccount[])
+comment2.params=accountNum
+comment2.target=int\ getIndex(int)
+comment2.text=\n\ precondition\:\ acctNum\ is\ the\ number\ of\ an\ account\ in\ the\n\ accounts\ array.\n\ postcondition\:\ returns\ the\ index\ in\ the\ accounts\ array\ of\ the\ngiven\ account\ number.
+comment3.params=trans
+comment3.target=void\ doOneTransaction(Transaction)
+comment3.text=\n\ precondition\:\ trans\ is\ a\ transaction\ for\ an\ account\ in\ the\n\ accounts\ array.\n\ postcondition\:\ the\ account\ for\ trans\ has\ been\ modified\ to\n\ reflect\ the\ change\ specified\nby\ the\ transaction.
+numComments=4

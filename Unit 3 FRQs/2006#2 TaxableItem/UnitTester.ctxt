@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=UnitTester
+comment0.text=\n\ Write\ a\ description\ of\ class\ UnitTests\ here.\n\n\ @author\ Melanie\ Duffin\n
+comment1.params=
+comment1.target=void\ testSuperclass()
+comment2.params=
+comment2.target=void\ testgetListPrice1()
+comment3.params=
+comment3.target=void\ testgetListPrice2()
+comment4.params=
+comment4.target=void\ testpurchasePrice()
+comment5.params=
+comment5.target=void\ testDealerMarkup1()
+comment6.params=
+comment6.target=void\ testDealerMarkup2()
+numComments=7
