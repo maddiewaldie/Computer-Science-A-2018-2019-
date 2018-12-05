@@ -1,5 +1,4 @@
-
-public abstract class TaxableItem
+public abstract class TaxableItem implements Item
 {
     private double taxRate;
     public abstract double getListPrice();
@@ -12,6 +11,6 @@ public abstract class TaxableItem
     // returns the price of the item including the tax
     public double purchasePrice()
     { 
-        /* to be implemented in part (a) */ 
+        return(getListPrice() * (1 + taxRate));
     }
 }
