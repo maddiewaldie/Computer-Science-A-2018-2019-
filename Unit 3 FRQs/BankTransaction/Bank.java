@@ -1,10 +1,9 @@
 /**
- * @author: (Your Name)
- * @version: (Date)
+ * @author: Madeleine Waldie
+ * @version: December 6, 2018
  * BankTransaction FRQ work
  * Use the FRQ question to work through the code
  * for this FRQ.
- * 
  */
 public class Bank{
     //fields
@@ -41,7 +40,14 @@ public class Bank{
      * by the transaction. */
     public void doOneTransaction ( Transaction trans )
     {
-        //code to be implemented in part C
+        int i = getIndex(trans.getAccountNumber());
+        if(trans.getTransactionType() == "d")
+        {
+            accounts[i].doDeposit(trans.getTransactionAmount());
+        }
+        else
+        {
+            accounts[i].doWithdrawal(trans.getTransactionAmount());
+        }
     }
 }
-

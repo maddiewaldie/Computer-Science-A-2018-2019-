@@ -1,12 +1,16 @@
 #BlueJ class context
 comment0.target=Transaction
-comment0.text=\n\ The\ Transaction\ class\ will\ perform\ a\ Bank\n\ Transaction\ of\ depositing\ or\ withdrawing\ money.\n\ \n\ @author\ Madeleine\ Waldie\n\ @version\ December\ 6,\ 2018\n
+comment0.text=\n\ The\ Transaction\ class\ will\ perform\ a\ Bank\n\ Transaction\ of\ depositing\ or\ withdrawing\ money.\n\ @author\ Madeleine\ Waldie\n\ @version\ December\ 6,\ 2018\n
 comment1.params=accountNumber\ transactionType\ transactionAmnt
 comment1.target=Transaction(int,\ java.lang.String,\ double)
+comment1.text=\n\ Transaction\ constructor\n
 comment2.params=
 comment2.target=int\ getAccountNumber()
+comment2.text=\n\ getAccountNumber\ Method\ -\ returns\ account\ number\ for\ the\ transaction\n
 comment3.params=
 comment3.target=java.lang.String\ getTransactionType()
+comment3.text=\n\ getTransactionType\ Method\ -\ returns\ type\ of\ transaction\n
 comment4.params=
 comment4.target=double\ getTransactionAmount()
+comment4.text=\n\ getTransactionAmount\ Method\ -\ returns\ amount\ of\ money\ involved\ in\ the\ transaction\n
 numComments=5
