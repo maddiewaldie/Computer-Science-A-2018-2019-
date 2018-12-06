@@ -14,7 +14,8 @@ public class BankAccount
     //constructor
     public BankAccount( int act, double bal )
     {
-        //complete the constructor here
+        accountNum = act;
+        balance = bal;
     }
     
     //methods

@@ -1,3 +1,9 @@
+/*
+ * Taxable Item Class
+ * 
+ * @author: Madeleine Waldie
+ * @version: December 6, 2018
+ */
 public abstract class TaxableItem implements Item
 {
     private double taxRate;

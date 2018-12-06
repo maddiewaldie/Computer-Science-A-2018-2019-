@@ -1,5 +1,5 @@
 /**
- * Write a description of class Vehicle here.
+ * Vehicle Class
  *
  * @author Madeleine Waldie
  * @version December 5, 2018
