@@ -1,3 +1,6 @@
+//imports
+import java.util.ArrayList;
+
 /**
  * Loops Class
  *
@@ -9,7 +12,9 @@ public class Loops
     public static void main(String[] args)
     {
         //instantiate variables
-        int[] myNums = {1, 9, 5, 3, 8, 7};
+        int[] myNums = {1, 9, 5, 3, 8, 7}; //regular array
+        ArrayList<Integer> myNumsAL = new ArrayList<Integer>(); //array list --> can only add objects one by one; can only use non-primitice data types
+        ArrayList<String> myWords = new ArrayList<String>();
         int sumRegular = 0;
         int sumEnhanced = 0;
         
