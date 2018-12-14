@@ -53,6 +53,16 @@ public class ListDriver
             }
         }
         
+        //other approach - jump back when you remove something
+        for(int i = 0; i < myWords.size(); i++)
+        {
+            if(myWords.get(i).equals("banana"))
+            {
+                myWords.remove(i);
+                i--;
+            }
+        }
+        
         //reprint list
         System.out.println("Removed banana. Now, My Words = " + myWords);
     }
