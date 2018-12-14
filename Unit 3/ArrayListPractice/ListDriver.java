@@ -62,6 +62,16 @@ public class ListDriver
                 i--;
             }
         }
+        /*
+        //can't use an enhanced for loop w/ a removal/adding problem
+        for(String i : myWords)
+        {
+            if(i.equals("banana"))
+            {
+                myWords.remove(i);
+            }
+        }
+        */
         
         //reprint list
         System.out.println("Removed banana. Now, My Words = " + myWords);
