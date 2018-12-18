@@ -9,6 +9,7 @@ public class Advance extends Ticket
     
     public Advance(int numDaysAdvance)
     {
+        super();
         days = numDaysAdvance;
     }
     
