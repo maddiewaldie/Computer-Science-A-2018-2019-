@@ -37,7 +37,8 @@ public class ElevensBoard extends Board {
     /**
      * Creates a new <code>ElevensBoard</code> instance.
      */
-    public ElevensBoard() {
+    public ElevensBoard() 
+    {
         super(BOARD_SIZE, RANKS, SUITS, POINT_VALUES);
     }
 
@@ -51,7 +52,8 @@ public class ElevensBoard extends Board {
      *         false otherwise.
      */
     @Override
-    public boolean isLegal(List<Integer> selectedCards) {
+    public boolean isLegal(List<Integer> selectedCards) 
+    {
         /* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
     }
 
@@ -64,7 +66,8 @@ public class ElevensBoard extends Board {
      *         false otherwise.
      */
     @Override
-    public boolean anotherPlayIsPossible() {
+    public boolean anotherPlayIsPossible() 
+    {
         /* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
     }
 
@@ -76,7 +79,8 @@ public class ElevensBoard extends Board {
      * @return true if the board entries in selectedCards
      *              contain an 11-pair; false otherwise.
      */
-    private boolean containsPairSum11(List<Integer> selectedCards) {
+    private boolean containsPairSum11(List<Integer> selectedCards) 
+    {
         /* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
     }
 
@@ -88,7 +92,8 @@ public class ElevensBoard extends Board {
      * @return true if the board entries in selectedCards
      *              include a jack, a queen, and a king; false otherwise.
      */
-    private boolean containsJQK(List<Integer> selectedCards) {
+    private boolean containsJQK(List<Integer> selectedCards) 
+    {
         /* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
     }
 }

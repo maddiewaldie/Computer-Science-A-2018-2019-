@@ -88,7 +88,8 @@ public class CardGameGUI extends JFrame implements ActionListener {
 	 * Initialize the GUI.
 	 * @param gameBoard is a <code>Board</code> subclass.
 	 */
-	public CardGameGUI(Board gameBoard) {
+	public CardGameGUI(Board gameBoard) 
+	{
 		board = gameBoard;
 		totalWins = 0;
 		totalGames = 0;
@@ -97,12 +98,16 @@ public class CardGameGUI extends JFrame implements ActionListener {
 		cardCoords = new Point[board.size()];
 		int x = LAYOUT_LEFT;
 		int y = LAYOUT_TOP;
-		for (int i = 0; i < cardCoords.length; i++) {
+		for (int i = 0; i < cardCoords.length; i++) 
+		{
 			cardCoords[i] = new Point(x, y);
-			if (i % 5 == 4) {
+			if (i % 5 == 4) 
+			{
 				x = LAYOUT_LEFT;
 				y += LAYOUT_HEIGHT_INC;
-			} else {
+			} 
+			else 
+			{
 				x += LAYOUT_WIDTH_INC;
 			}
 		}
@@ -116,9 +121,12 @@ public class CardGameGUI extends JFrame implements ActionListener {
 	/**
 	 * Run the game.
 	 */
-	public void displayGame() {
-		java.awt.EventQueue.invokeLater(new Runnable() {
-			public void run() {
+	public void displayGame() 
+	{
+		java.awt.EventQueue.invokeLater(new Runnable() 
+		{
+			public void run() 
+			{
 				setVisible(true);
 			}
 		});
@@ -127,16 +135,21 @@ public class CardGameGUI extends JFrame implements ActionListener {
 	/**
 	 * Draw the display (cards and messages).
 	 */
-	public void repaint() {
-		for (int k = 0; k < board.size(); k++) {
+	public void repaint() 
+	{
+		for (int k = 0; k < board.size(); k++) 
+		{
 			String cardImageFileName =
 				imageFileName(board.cardAt(k), selections[k]);
 			URL imageURL = getClass().getResource(cardImageFileName);
-			if (imageURL != null) {
+			if (imageURL != null) 
+			{
 				ImageIcon icon = new ImageIcon(imageURL);
 				displayCards[k].setIcon(icon);
 				displayCards[k].setVisible(true);
-			} else {
+			} 
+			else 
+			{
 				throw new RuntimeException(
 					"Card image not found: \"" + cardImageFileName + "\"");
 			}
@@ -154,9 +167,12 @@ public class CardGameGUI extends JFrame implements ActionListener {
 	/**
 	 * Initialize the display.
 	 */
-	private void initDisplay()	{
-		panel = new JPanel() {
-			public void paintComponent(Graphics g) {
+	private void initDisplay()	
+	{
+		panel = new JPanel() 
+		{
+			public void paintComponent(Graphics g) 
+			{
 				super.paintComponent(g);
 			}
 		};
@@ -167,7 +183,8 @@ public class CardGameGUI extends JFrame implements ActionListener {
 		int classNameLen = className.length();
 		int boardLen = "Board".length();
 		String boardStr = className.substring(classNameLen - boardLen);
-		if (boardStr.equals("Board") || boardStr.equals("board")) {
+		if (boardStr.equals("Board") || boardStr.equals("board")) 
+		{
 			int titleLength = classNameLen - boardLen;
 			setTitle(className.substring(0, titleLength));
 		}
@@ -176,7 +193,8 @@ public class CardGameGUI extends JFrame implements ActionListener {
 		// and adjust JFrame height if necessary
 		int numCardRows = (board.size() + 4) / 5;
 		int height = DEFAULT_HEIGHT;
-		if (numCardRows > 2) {
+		if (numCardRows > 2) 
+		{
 			height += (numCardRows - 2) * LAYOUT_HEIGHT_INC;
 		}
 
@@ -185,7 +203,8 @@ public class CardGameGUI extends JFrame implements ActionListener {
 		panel.setPreferredSize(
 			new Dimension(DEFAULT_WIDTH - 20, height - 20));
 		displayCards = new JLabel[board.size()];
-		for (int k = 0; k < board.size(); k++) {
+		for (int k = 0; k < board.size(); k++) 
+		{
 			displayCards[k] = new JLabel();
 			panel.add(displayCards[k]);
 			displayCards[k].setBounds(cardCoords[k].x, cardCoords[k].y,
@@ -233,7 +252,8 @@ public class CardGameGUI extends JFrame implements ActionListener {
 								  250, 30);
 		panel.add(totalsMsg);
 
-		if (!board.anotherPlayIsPossible()) {
+		if (!board.anotherPlayIsPossible()) 
+		{
 			signalLoss();
 		}
 
@@ -246,7 +266,8 @@ public class CardGameGUI extends JFrame implements ActionListener {
 	/**
 	 * Deal with the user clicking on something other than a button or a card.
 	 */
-	private void signalError() {
+	private void signalError() 
+	{
 		Toolkit t = panel.getToolkit();
 		t.beep();
 	}
@@ -261,13 +282,16 @@ public class CardGameGUI extends JFrame implements ActionListener {
 	 * @param isSelected flag that indicates if the card is selected
 	 * @return String representation of the image
 	 */
-	private String imageFileName(Card c, boolean isSelected) {
+	private String imageFileName(Card c, boolean isSelected) 
+	{
 		String str = "cards/";
-		if (c == null) {
+		if (c == null) 
+		{
 			return "cards/back1.GIF";
 		}
 		str += c.rank() + c.suit();
-		if (isSelected) {
+		if (isSelected) 
+		{
 			str += "S";
 		}
 		str += ".GIF";
@@ -279,45 +303,60 @@ public class CardGameGUI extends JFrame implements ActionListener {
 	 * or the "Restart" button).
 	 * @param e the button click action event
 	 */
-	public void actionPerformed(ActionEvent e) {
-		if (e.getSource().equals(replaceButton)) {
+	public void actionPerformed(ActionEvent e) 
+	{
+		if (e.getSource().equals(replaceButton)) 
+		{
 			// Gather all the selected cards.
 			List<Integer> selection = new ArrayList<Integer>();
-			for (int k = 0; k < board.size(); k++) {
-				if (selections[k]) {
+			for (int k = 0; k < board.size(); k++) 
+			{
+				if (selections[k]) 
+				{
 					selection.add(new Integer(k));
 				}
 			}
 			// Make sure that the selected cards represent a legal replacement.
-			if (!board.isLegal(selection)) {
+			if (!board.isLegal(selection)) 
+			{
 				signalError();
 				return;
 			}
-			for (int k = 0; k < board.size(); k++) {
+			for (int k = 0; k < board.size(); k++) 
+			{
 				selections[k] = false;
 			}
 			// Do the replace.
 			board.replaceSelectedCards(selection);
-			if (board.isEmpty()) {
+			if (board.isEmpty()) 
+			{
 				signalWin();
-			} else if (!board.anotherPlayIsPossible()) {
+			} 
+			else if (!board.anotherPlayIsPossible()) 
+			{
 				signalLoss();
 			}
 			repaint();
-		} else if (e.getSource().equals(restartButton)) {
+		} 
+		else if (e.getSource().equals(restartButton)) 
+		{
 			board.newGame();
 			getRootPane().setDefaultButton(replaceButton);
 			winMsg.setVisible(false);
 			lossMsg.setVisible(false);
-			if (!board.anotherPlayIsPossible()) {
+			if (!board.anotherPlayIsPossible()) 
+			{
 				signalLoss();
 				lossMsg.setVisible(true);
 			}
-			for (int i = 0; i < selections.length; i++) {
+			for (int i = 0; i < selections.length; i++) 
+			{
 				selections[i] = false;
 			}
 			repaint();
-		} else {
+		} 
+		else 
+		{
 			signalError();
 			return;
 		}
@@ -326,7 +365,8 @@ public class CardGameGUI extends JFrame implements ActionListener {
 	/**
 	 * Display a win.
 	 */
-	private void signalWin() {
+	private void signalWin() 
+	{
 		getRootPane().setDefaultButton(restartButton);
 		winMsg.setVisible(true);
 		totalWins++;
@@ -336,7 +376,8 @@ public class CardGameGUI extends JFrame implements ActionListener {
 	/**
 	 * Display a loss.
 	 */
-	private void signalLoss() {
+	private void signalLoss() 
+	{
 		getRootPane().setDefaultButton(restartButton);
 		lossMsg.setVisible(true);
 		totalGames++;
@@ -345,7 +386,8 @@ public class CardGameGUI extends JFrame implements ActionListener {
 	/**
 	 * Receives and handles mouse clicks.  Other mouse events are ignored.
 	 */
-	private class MyMouseListener implements MouseListener {
+	private class MyMouseListener implements MouseListener 
+	{
 
 		/**
 		 * Handle a mouse click on a card by toggling its "selected" property.
@@ -353,9 +395,11 @@ public class CardGameGUI extends JFrame implements ActionListener {
 		 * @param e the mouse event.
 		 */
 		public void mouseClicked(MouseEvent e) {
-			for (int k = 0; k < board.size(); k++) {
+			for (int k = 0; k < board.size(); k++) 
+			{
 				if (e.getSource().equals(displayCards[k])
-						&& board.cardAt(k) != null) {
+						&& board.cardAt(k) != null) 
+						{
 					selections[k] = !selections[k];
 					repaint();
 					return;
@@ -368,28 +412,32 @@ public class CardGameGUI extends JFrame implements ActionListener {
 		 * Ignore a mouse exited event.
 		 * @param e the mouse event.
 		 */
-		public void mouseExited(MouseEvent e) {
+		public void mouseExited(MouseEvent e) 
+		{
 		}
 
 		/**
 		 * Ignore a mouse released event.
 		 * @param e the mouse event.
 		 */
-		public void mouseReleased(MouseEvent e) {
+		public void mouseReleased(MouseEvent e) 
+		{
 		}
 
 		/**
 		 * Ignore a mouse entered event.
 		 * @param e the mouse event.
 		 */
-		public void mouseEntered(MouseEvent e) {
+		public void mouseEntered(MouseEvent e) 
+		{
 		}
 
 		/**
 		 * Ignore a mouse pressed event.
 		 * @param e the mouse event.
 		 */
-		public void mousePressed(MouseEvent e) {
+		public void mousePressed(MouseEvent e) 
+		{
 		}
 	}
 }

@@ -20,7 +20,8 @@ public class Shuffler {
      * Tests shuffling methods.
      * @param args is not used.
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         System.out.println("Results of " + SHUFFLE_COUNT +" consecutive perfect shuffles:");
         int[] values1 = new int[VALUE_COUNT];
         for (int i = 0; i < values1.length; i++) 
@@ -31,7 +32,8 @@ public class Shuffler {
         {
             values1=perfectShuffle(values1);
             System.out.print("  " + j + ":");
-            for (int k = 0; k < values1.length; k++) {
+            for (int k = 0; k < values1.length; k++) 
+            {
                 System.out.print(" " + values1[k]);
             }
             System.out.println();
@@ -48,7 +50,8 @@ public class Shuffler {
         {
             values2=selectionShuffle(values2);
             System.out.print("  " + j + ":");
-            for (int k = 0; k < values2.length; k++) {
+            for (int k = 0; k < values2.length; k++) 
+            {
                 System.out.print(" " + values2[k]);
             }
             System.out.println();
@@ -63,32 +66,37 @@ public class Shuffler {
      * @param values is an array of integers simulating cards to be shuffled.
      * @return the array of shuffled values
      */
-    public static int[] perfectShuffle(int[] values) {
+    public static int[] perfectShuffle(int[] values) 
+    {
         // Create arrays
         int[] part1 = new int[HALF_VALUE_COUNT];
         int[] part2 = new int[HALF_VALUE_COUNT];
         int[] newValues = new int[VALUE_COUNT];
 
         // Assign half of the deck to part1
-        for(int a = 0; a < HALF_VALUE_COUNT; a++) {
+        for(int a = 0; a < HALF_VALUE_COUNT; a++) 
+        {
             part1[a] = values[a];
         }
 
         //Assign the 2nd half of the deck to part2
-        for(int b = 0; b < HALF_VALUE_COUNT; b++) {
+        for(int b = 0; b < HALF_VALUE_COUNT; b++) 
+        {
             part2[b] = values[b + HALF_VALUE_COUNT];
         }
 
-        for(int c = 0; c < HALF_VALUE_COUNT; c++) {
+        for(int c = 0; c < HALF_VALUE_COUNT; c++) 
+        {
             newValues[2*c] = part2[c];
             newValues[2*c+1] = part1[c];
         }
 
         // If there is an odd amount of cards in the deck
-        if((VALUE_COUNT % 2) != 0) {
+        if((VALUE_COUNT % 2) != 0) 
+        {
             newValues[VALUE_COUNT - 1] = part2[HALF_VALUE_COUNT];
         }
-        
+
         // Return the shuffled deck
         values = newValues;
         return values;
@@ -106,14 +114,16 @@ public class Shuffler {
      * @param values is an array of integers simulating cards to be shuffled.
      * @return the array of shuffled values
      */
-    public static int[] selectionShuffle(int[] values) {
-        for(int i = (VALUE_COUNT - 1); i >= 0; i--) {
+    public static int[] selectionShuffle(int[] values) 
+    {
+        for(int i = (VALUE_COUNT - 1); i >= 0; i--) 
+        {
             int random = (int)(Math.random() * i);
             int temp = values[random];
             values[random] = values[i];
             values[i] = temp;
         }
-        
+
         // Return the shuffled deck
         return values;
     }
