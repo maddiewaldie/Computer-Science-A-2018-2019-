@@ -46,8 +46,6 @@ Activity 9 uses the ElevensBoard Class
 
 ## About
 
-### Author
-Code written by Madeleine Waldie
+**Author:** Madeleine Waldie
 
-### Version
-Elevens Lab was last edited on January 28, 2019
+**Version:** January 28, 2019
