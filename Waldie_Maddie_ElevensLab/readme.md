@@ -18,7 +18,7 @@ Below, you will see what key concepts are covered in this lab:
 * Swapping values in arrays and Lists
 * Writing a Class (fields, constructors, and methods)
 
-##Activities
+## Activities
 
 ### Activity 1: 
 Activity 1 uses the Card Class and CardTester Class
