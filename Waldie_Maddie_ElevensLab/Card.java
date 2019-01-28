@@ -72,11 +72,12 @@ public class Card {
      */
     public boolean matches(Card otherCard) 
     {
+        //If the card suit, rank, and point value match the parameter's card suit, rank, and point value
         if ((otherCard.suit().equals(suit())) && (otherCard.rank().equals(rank())) && (otherCard.pointValue() == (pointValue())))
         {
             return true;
         }
-        else
+        else //If the cards are different
         {
             return false;
         }

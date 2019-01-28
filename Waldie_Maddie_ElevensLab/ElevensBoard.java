@@ -54,11 +54,12 @@ public class ElevensBoard extends Board {
     @Override
     public boolean isLegal(List<Integer> selectedCards) 
     {
+        //If the deck is not empty, & it eaither contains a pair that adds up to 11 or a JQK trio
         if(selectedCards.size() > 0 && (containsPairSum11(selectedCards) || containsJQK(selectedCards)))
         {
             return(true);
         }
-        else
+        else //Does not meet any of the above conditions
         {
             return(false);
         }
@@ -75,17 +76,18 @@ public class ElevensBoard extends Board {
     @Override
     public boolean anotherPlayIsPossible() 
     {
-        boolean playPossible = true;
-        List<Integer> indexes = cardIndexes();
+        //Create bool variable for if play is possible 
+        boolean playPossible = true; //Set true for if the cards on the board contain a pair that adds up to 11
+        List<Integer> indexes = cardIndexes(); //Create a list of indexes
         if (!containsPairSum11(indexes)) 
         {
             if(containsJQK(indexes))
             {
-                playPossible = true;
+                playPossible = true; //Plays still possible
             }
             else
             {
-                playPossible = false;
+                playPossible = false; //No plays possible
             }
         }
         return(playPossible);
@@ -101,16 +103,18 @@ public class ElevensBoard extends Board {
      */
     private boolean containsPairSum11(List<Integer> selectedCards) 
     {
-        boolean contains = false;
+        //Create variables
+        boolean contains = false; //Set false in case no cards add up to 11
         int card1;
         int card2;
+        //Go through the selected cards
         for (int i = 0; i < selectedCards.size() - 1; i++) 
         {
             for (int j = i + 1; j < selectedCards.size(); j++) 
             {
-                card1 = cardAt(selectedCards.get(i)).pointValue();
-                card2 = cardAt(selectedCards.get(j)).pointValue();
-                if ((card1 + card2) == 11) 
+                card1 = cardAt(selectedCards.get(i)).pointValue(); //Assign first card
+                card2 = cardAt(selectedCards.get(j)).pointValue(); // Assign second card
+                if ((card1 + card2) == 11) // If card1 and card2 add up to 11
                 {
                     contains = true;
                 }
@@ -129,9 +133,11 @@ public class ElevensBoard extends Board {
      */
     private boolean containsJQK(List<Integer> selectedCards) 
     {
+        //Create variables
         boolean jack = false;
         boolean queen = false;
         boolean king = false;
+        //Go through the selected cards
         for (int i = 0; i < selectedCards.size(); i++) 
         {
             if (cardAt(selectedCards.get(i)).rank().equals("jack")) 
@@ -147,11 +153,12 @@ public class ElevensBoard extends Board {
                 king = true;
             }
         }
-        if (jack && queen && king)
+        
+        if (jack && queen && king) //Return true if contains J, Q, and K
         {
             return(true);
         }
-        else
+        else //Return false if does not contain J, Q, and K
         {
             return(false);
         }

@@ -30,15 +30,19 @@ public class Deck {
      */
     public Deck(String[] ranks, String[] suits, int[] values) 
     {
+        //Create new array list of cards
         cards = new ArrayList<Card>();
-        for (int j = 0; j < ranks.length; j++) 
+        for (int j = 0; j < ranks.length; j++) //Go through each rank
         {
-            for (String suitString : suits) 
+            for (String suitString : suits) //Go through each suit
             {
+                //Add a new card to the array list
                 cards.add(new Card(ranks[j], suitString, values[j]));
             }
         }
+        //Set the size of the deck of cards
         size = cards.size();
+        //Shuffle the deck of cards
         shuffle();
     }
 
@@ -48,11 +52,11 @@ public class Deck {
      */
     public boolean isEmpty() 
     {
-        if (cards.size() == 0)
+        if (cards.size() == 0) //If deck is empty
         {
             return true;
         }
-        else
+        else //If deck is not empty
         {
             return false;
         }
@@ -73,10 +77,10 @@ public class Deck {
      */
     public void shuffle() 
     {
-        for(int i = (size - 1); i >= 0; i--) 
+        for(int i = (size - 1); i >= 0; i--)
         {
-            int random = (int)(Math.random() * i);
-            Card temp = cards.get(random);
+            int random = (int)(Math.random() * i); //Creates random number
+            Card temp = cards.get(random); //Creates a temporary card
             cards.set(random, cards.get(i));
             cards.set(i, temp);
         }
