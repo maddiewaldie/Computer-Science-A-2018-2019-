@@ -44,10 +44,10 @@ Activity 8 uses the Board Class and ElevensBoard Class
 ### Activity 9:
 Activity 9 uses the ElevensBoard Class
 
-##About
+## About
 
-###Author
+### Author
 Code written by Madeleine Waldie
 
-###Version
+### Version
 Elevens Lab was last edited on January 28, 2019
