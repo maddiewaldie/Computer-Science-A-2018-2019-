@@ -1,7 +1,8 @@
 /**
  * Card.java
- *
  * <code>Card</code> represents a playing card.
+ * Author: Madeleine Waldie
+ * Version: January 28, 2019
  */
 public class Card {
 

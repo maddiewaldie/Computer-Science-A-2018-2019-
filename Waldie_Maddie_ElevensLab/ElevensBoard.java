@@ -1,8 +1,11 @@
+//Imports
 import java.util.List;
 import java.util.ArrayList;
 
 /**
  * The ElevensBoard class represents the board in a game of Elevens.
+ * Author: Madeleine Waldie
+ * Version: January 28, 2019
  */
 public class ElevensBoard extends Board {
 
@@ -153,7 +156,7 @@ public class ElevensBoard extends Board {
                 king = true;
             }
         }
-        
+
         if (jack && queen && king) //Return true if contains J, Q, and K
         {
             return(true);

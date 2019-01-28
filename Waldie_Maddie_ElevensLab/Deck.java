@@ -1,3 +1,4 @@
+//Imports
 import java.util.List;
 import java.util.ArrayList;
 
@@ -5,6 +6,8 @@ import java.util.ArrayList;
  * The Deck class represents a shuffled deck of cards.
  * It provides several operations including
  *      initialize, shuffle, deal, and check if empty.
+ * Author: Madeleine Waldie
+ * Version: January 28, 2019
  */
 public class Deck {
 

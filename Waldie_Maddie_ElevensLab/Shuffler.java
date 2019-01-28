@@ -1,6 +1,9 @@
+//Imports
 import java.util.ArrayList;
 /**
  * This class provides a convenient way to test shuffling methods.
+ * Author: Madeleine Waldie
+ * Version: January 28, 2019
  */
 public class Shuffler {
 

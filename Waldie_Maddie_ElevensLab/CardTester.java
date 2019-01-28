@@ -1,5 +1,7 @@
 /**
  * This is a class that tests the Card class.
+ * Author: Madeleine Waldie
+ * Version: January 28, 2019
  */
 public class CardTester {
 
