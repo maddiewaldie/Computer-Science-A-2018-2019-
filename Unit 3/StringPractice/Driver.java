@@ -34,5 +34,13 @@ public class Driver
         System.out.println("Word 4 compared to Word 5: " + comp4); //returns -2 --> w4 comes before w5
         int comp5 = w6.compareTo(w4);
         System.out.println("Word 6 compared to Word 4: " + comp5); //returns 14 --> w6 comes after w4
+        
+        //equals
+        boolean eq1 = w1.equals(w3);
+        System.out.println("Word 1 compared to Word 3: " + eq1); //returns true
+        boolean eq2 = w1.equals(w2);
+        System.out.println("Word 1 compared to Word 2: " + eq2); //returns false
+        boolean eq3 =  w4.equals(w5);
+        System.out.println("Word 4 compared to Word 5: " + eq3); //returns false
     }
 }
