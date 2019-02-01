@@ -18,7 +18,7 @@ Below, you will see what key concepts are covered in this lab:
 * Swapping values in arrays and Lists
 * Writing a Class (fields, constructors, and methods)
 
-##Activities
+## Activities
 
 ### Activity 1: 
 Activity 1 uses the Card Class and CardTester Class
@@ -44,10 +44,8 @@ Activity 8 uses the Board Class and ElevensBoard Class
 ### Activity 9:
 Activity 9 uses the ElevensBoard Class
 
-##About
+## About
 
-###Author
-Code written by Madeleine Waldie
+**Author:** Madeleine Waldie
 
-###Version
-Elevens Lab was last edited on January 28, 2019
+**Version:** January 28, 2019
