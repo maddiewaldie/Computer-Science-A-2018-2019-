@@ -42,5 +42,20 @@ public class Driver
             }
             System.out.println("");
         }
+        
+        //Calculate avg of values in 2d array & print avg
+        double sum = 0;
+        int counter = 0;
+        double avg = 0;
+        for(int[] tempA : myNums)
+        {
+            for(int tempB : tempA)
+            {
+                sum+=tempB;
+                counter ++;
+            }
+        }
+        avg = (sum/counter);
+        System.out.println("Avg: " + avg);
     }
 }
