@@ -1,11 +1,12 @@
 # **Array Notes**
+> Madeleine Waldie • February 5, 2019
 
 ## **Single vs Multidimensional Arrays**
 * A 1D array has only one demension, whereas a 2d array has 2 demensions. 
     * A 2D array is an array of arrays.
 
 ### **Tables (Single & Multidimensional Arrays)**
-You can imagine arays as tables. Below, you can see what a single vs a multidimsnsional array looks like.
+> You can imagine arays as tables. Below, you can see what a single vs a multidimsnsional array looks like.
 
 **Single Dimension Array**
 | 5  | 9  | 3  |  0 |  7 |
