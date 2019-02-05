@@ -14,6 +14,7 @@ public class Driver
         String w4 = "apples";
         String w5 = "banana";
         String w6 = "orange";
+        String w7 = "";
         
         //charAt(int loc) --> character
         char letter1 = w1.charAt(0);
@@ -50,7 +51,12 @@ public class Driver
         System.out.println("Location of 'ana' in Banana: " + loc2);
         
         //length
-        
+        int len1 = w1.length();
+        System.out.println("Length of word 1: " + len1);
+        int len2 = w6.length();
+        System.out.println("Length of word 6: " + len2);
+        int len3 = w7.length();
+        System.out.println("Length of word 7: " + len3);
         
         //replace
         
