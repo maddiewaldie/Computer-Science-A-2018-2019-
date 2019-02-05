@@ -36,7 +36,7 @@
         * `name[element1][element2];`
 * **Length:**
     * How to access the length of a 1D array
-        * `name.length();`
+        * `name.length;`
     * How to access the length of a 2D array
-        * To find row length: `name.length();`
-        * To find column length: `name[0].length();`
+        * To find row length: `name.length;`
+        * To find column length: `name[0].length;`
