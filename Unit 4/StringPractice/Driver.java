@@ -42,5 +42,24 @@ public class Driver
         System.out.println("Word 1 compared to Word 2: " + eq2); //returns false
         boolean eq3 =  w4.equals(w5);
         System.out.println("Word 4 compared to Word 5: " + eq3); //returns false
+        
+        //indexOf
+        int loc1 = w1.indexOf("lo");
+        System.out.println("Location of 'lo' in Hello: " + loc1);
+        int loc2 = w5.indexOf("ana", 3);
+        System.out.println("Location of 'ana' in Banana: " + loc2);
+        
+        //length
+        
+        
+        //replace
+        
+        
+        //substring
+        
+        
+        //toLowercase & toUppercase
+        
+        
     }
 }
