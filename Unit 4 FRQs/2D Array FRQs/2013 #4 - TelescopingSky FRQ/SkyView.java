@@ -67,10 +67,11 @@ public class SkyView
      */
     public double getAverage( int startRow, int endRow, int startCol, int endCol)
     {
+        //Create variables
         int r = endRow - startRow + 1; //number of rows in section
         int c = endCol - startCol + 1; //number of columns in section
         double sum = 0.0;
-        
+
         //Go through section
         for(int a = startRow; a <= endRow; a++)
         {
@@ -79,7 +80,7 @@ public class SkyView
                 sum+= view[a][b];
             }
         }
-        
+
         //Return average
         return(sum/(r*c));
     }
