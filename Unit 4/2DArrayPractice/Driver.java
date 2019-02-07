@@ -63,16 +63,43 @@ public class Driver
         //Create a transpose of myNums
         int[][] transpose = new int[myNums.length][myNums[0].length]; //empty
         System.out.print("\n");
-        System.out.println("transpose:");
         if (myNums.length > 0) {
             //Fill transpose
             for (int a = 0; a < myNums[0].length; a++) {
                 for (int b = 0; b < myNums.length; b++) {
                     transpose[b][a] = myNums[b][a];
-                    System.out.print(transpose[b][a] + " ");
                 }
-                System.out.print("\n");
             }
+        }
+        
+        System.out.println("transpose: ");
+        for(int[] tempA : transpose)
+        {
+            for(int tempB : tempA)
+            {
+                System.out.print(tempB + " ");
+            }
+            System.out.print("\n");
+        }
+        System.out.print("\n");
+        
+        //Turn transpose into a 1d array (in column major order)
+        int[] oneArray = new int[transpose.length*transpose[0].length];
+        int loc = 0;
+        if (transpose.length > 0) {
+            //Fill 1d array
+            for (int a = 0; a < transpose.length; a++) {
+                for (int b = 0; b < transpose[0].length; b++) {
+                    oneArray[loc] = transpose[a][b];
+                    loc++;
+                }
+            }
+        }
+        
+        System.out.println("1d array: ");
+        for(int tempA : oneArray)
+        {
+            System.out.print(tempA + " ");
         }
     }
 }
