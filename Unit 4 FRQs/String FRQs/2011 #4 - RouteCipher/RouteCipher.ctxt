@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=RouteCipher
+comment0.text=\n\ Write\ a\ description\ of\ class\ RouteCipher\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=str
+comment1.target=void\ fillBlock(java.lang.String)
+comment1.text=\n\ Places\ a\ string\ into\ letterBlock\ in\ row-major\ order\n\ @param\ str\ the\ string\ to\ be\ processed\n\ Postcondition\:\n\ \ \ if\ str.length()\ <\ numRows\ *\ numCols,\ "A"\ is\ placed\ in\ each\ unfilled\ cell\n\ \ \ if\ str.length()\ >\ numRows\ *\ numCols,\ trailing\ characters\ are\ ignored\n
+comment2.params=
+comment2.target=java.lang.String\ encryptBlock()
+comment2.text=\n\ Extracts\ encrypted\ string\ from\ letterBlock\ in\ column-major\ order\n\ Precondition\:\ letterBlock\ has\ been\ filled\n\ @return\ the\ encrypted\ string\ from\ letterBlock\n
+comment3.params=message
+comment3.target=java.lang.String\ encryptMessage(java.lang.String)
+comment3.text=\n\ Encrypts\ a\ message\n\ @param\ message\ the\ string\ to\ be\ encrypted\n\ @return\ the\ encrypted\ message;\n\ \ \ if\ message\ is\ the\ empty\ string,\ returns\ the\ empty\ string\n
+comment4.params=rows\ cols
+comment4.target=RouteCipher(int,\ int)
+comment5.params=
+comment5.target=java.lang.String\ printLetterBlock()
+comment6.params=
+comment6.target=java.lang.String[][]\ getLetterBlock()
+numComments=7

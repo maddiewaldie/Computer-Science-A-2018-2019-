@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=SparseArray
+comment0.text=\n\ Write\ a\ description\ of\ class\ SparseArray\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=SparseArray()
+comment1.text=Constructs\ an\ empty\ SparseArray.
+comment2.params=
+comment2.target=int\ getNumRows()
+comment2.text=\ \n\ Returns\ the\ number\ of\ rows\ in\ the\ sparse\ array.\ \n
+comment3.params=
+comment3.target=int\ getNumCols()
+comment3.text=\ \n\ Returns\ the\ number\ of\ columns\ in\ the\ sparse\ array.\ \n
+comment4.params=row\ col
+comment4.target=int\ getValueAt(int,\ int)
+comment4.text=\ \n\ Returns\ the\ value\ of\ the\ element\ at\ row\ index\ row\ and\ column\ index\ col\ in\ the\ sparse\ array.\n\ Precondition\:\ 0\ <\ row\ <\ getNumRows()\ \n\t\ \ \ \ \ \ \ \ \ \ \ \ 0\ <\ col\ <\ getNumCols()\ \n
+comment5.params=col
+comment5.target=void\ removeColumn(int)
+comment5.text=\ \n\ Removes\ the\ column\ col\ from\ the\ sparse\ array.\ \n\ Precondition\:\ 0\ <\ col\ <\ getNumCols()\ \n
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment7.params=rows\ cols\ values
+comment7.target=SparseArray(int,\ int,\ java.util.ArrayList)
+comment8.params=
+comment8.target=java.util.List\ getEntries()
+numComments=9

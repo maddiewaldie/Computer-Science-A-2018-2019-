@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=UnitTester
+comment0.text=\n\ Write\ a\ description\ of\ class\ UnitTests\ here.\n\n\ @author\ Melanie\ Duffin\n
+comment1.params=
+comment1.target=void\ testA1()
+comment2.params=
+comment2.target=void\ testB1()
+comment3.params=actual\ expected
+comment3.target=boolean\ seatsMatch(Student[][],\ Student[][])
+numComments=4

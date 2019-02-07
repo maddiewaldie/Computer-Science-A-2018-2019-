@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=WordList
+comment0.text=\n\ Write\ a\ description\ of\ class\ WordList\ here.\n\n\ @author\ College\ Board\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=words
+comment1.target=WordList(java.util.ArrayList)
+comment1.text=\n\ constructor\ -\ DO\ NOT\ ALTER\n\ used\ for\ testing\ purposes\n
+comment2.params=len
+comment2.target=int\ numWordsOfLength(int)
+comment2.text=\n\ postcondition\:\ returns\ the\ number\ of\ words\ in\ this\ WordList\n\ that\ are\ exactly\ len\ letters\ long\n
+comment3.params=len
+comment3.target=void\ removeWordsOfLength(int)
+comment3.text=\n\ postcondition\:\ all\ words\ that\ are\ exactly\ len\ letters\n\ long\ have\ been\ removed\ from\ this\ WordList,\ with\ the\ \n\ order\ of\ the\ remaining\ words\ unchanged\n
+comment4.params=
+comment4.target=java.util.ArrayList\ getMyList()
+numComments=5

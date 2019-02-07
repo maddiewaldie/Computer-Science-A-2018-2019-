@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Student
+comment0.text=\n\ Write\ a\ description\ of\ class\ Student\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=java.lang.String\ getName()
+comment1.text=\n\ Returns\ the\ name\ of\ this\ Student\n
+comment2.params=
+comment2.target=int\ getAbsenceCount()
+comment2.text=\n\ Returns\ the\ number\ of\ times\ this\ Student\ has\ missed\ class\n
+comment3.params=n\ a
+comment3.target=Student(java.lang.String,\ int)
+comment4.params=other
+comment4.target=boolean\ matches(Student)
+comment5.params=
+comment5.target=java.lang.String\ toString()
+numComments=6
