@@ -18,9 +18,10 @@ public class Driver
         int numRows = myNums.length;
         int numColumns = myNums[0].length;
         System.out.println("Rows: " + numRows + ", Columns: " + numColumns);
-        
+        System.out.print("\n");
         //Print out 2D array w/ regular for loop
         System.out.println("myNums: " + myNums); //Prints memory location
+        System.out.print("\n");
         System.out.println("myNums: ");
         for (int a = 0; a < myNums.length; a++)
         {
@@ -30,7 +31,7 @@ public class Driver
             }
             System.out.println("");
         }
-        System.out.println();
+        System.out.print("\n");
         
         //Print out 2D array w/ enhanced for loop
         System.out.println("myNums: ");
@@ -40,7 +41,7 @@ public class Driver
             {
                 System.out.print(tempB + " ");
             }
-            System.out.println("");
+            System.out.print("\n");
         }
         
         //Calculate avg of values in 2d array & print avg
@@ -56,6 +57,22 @@ public class Driver
             }
         }
         avg = (sum/counter);
+        System.out.print("\n");
         System.out.println("Avg: " + avg);
+        
+        //Create a transpose of myNums
+        int[][] transpose = new int[myNums.length][myNums[0].length]; //empty
+        System.out.print("\n");
+        System.out.println("transpose:");
+        if (myNums.length > 0) {
+            //Fill transpose
+            for (int a = 0; a < myNums[0].length; a++) {
+                for (int b = 0; b < myNums.length; b++) {
+                    transpose[b][a] = myNums[b][a];
+                    System.out.print(transpose[b][a] + " ");
+                }
+                System.out.print("\n");
+            }
+        }
     }
 }
