@@ -1,7 +1,7 @@
 import java.util.*;
 
 /**
- * Write a description of class Driver here.
+ * 2D Array Practice Driver
  *
  * @author Madeleine Waldie
  * @version February 5, 2019
