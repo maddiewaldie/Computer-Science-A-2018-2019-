@@ -59,7 +59,8 @@ public class Driver
         System.out.println("Length of word 7: " + len3);
         
         //replace
-        
+        String temp = w4.replace("p", "M");
+        System.out.println("apples with p replaced with M: " + temp);
         
         //substring
         
