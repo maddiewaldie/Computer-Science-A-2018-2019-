@@ -2,8 +2,8 @@ import java.util.*;
 /**
  * Write a description of class SparseArray here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Madeleine Waldie
+ * @version February 14, 2019
  */
 public class SparseArray
 {
@@ -48,7 +48,17 @@ public class SparseArray
      */ 
     public int getValueAt(int row, int col) 
     { 
-        /* to be implemented in part (a) */ 
+        //Go through the array of entries
+        for (SparseArrayEntry e : entries)
+        {
+            if (e.getRow() == row && e.getCol() == col)
+            {
+                return e.getValue(); //return value at row & col
+            }
+        }
+
+        //Return 0 if nothing else is true
+        return 0;
     }
 
     /** 
@@ -57,9 +67,27 @@ public class SparseArray
      */ 
     public void removeColumn(int col) 
     { 
-        /* to be implemented in part (b) */ 
+        //Go through the array of entries
+        for (int a = entries.size() - 1; a >= 0; a--)
+        {
+            SparseArrayEntry e = entries.get(a);
+            int columns = e.getCol();
+            if (columns == col)
+            {
+                // Remove column
+                entries.remove(a);
+            }
+            else if (columns > col)
+            {
+                //Set column to next column
+                entries.set(a, new SparseArrayEntry(e.getRow(), (columns - 1), e.getValue()));
+            }
+        }
+        
+        //Decrease the amount of columns from the sparse array
+        numCols--;
     }
-    
+
     // There may be instance variables, constructors, and methods that are not shown.
 
     //methods for testing - DO NOT ALTER
@@ -72,12 +100,14 @@ public class SparseArray
         }
         return temp;
     }
+
     public SparseArray(int rows, int cols, ArrayList<SparseArrayEntry> values)
     {
         numRows = rows;
         numCols = cols;
         entries = values;
     }
+
     public List<SparseArrayEntry> getEntries()
     {
         return entries;

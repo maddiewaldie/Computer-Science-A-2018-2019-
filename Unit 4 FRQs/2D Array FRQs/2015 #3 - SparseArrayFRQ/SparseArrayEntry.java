@@ -2,8 +2,8 @@
 /**
  * Write a description of class SparseArrayEntry here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Madeleine Waldie
+ * @version February 14, 2019
  */
 public class SparseArrayEntry
 {
