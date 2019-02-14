@@ -73,7 +73,10 @@ public class Driver
         System.out.println("apples mixed up so the first half is last & the last half is first: " + mixedUp);
         
         //toLowercase & toUppercase
-        
+        String lower = w5.toLowerCase();
+        System.out.println("Lower: " + lower);
+        String upper = w6.toUpperCase();
+        System.out.println("Upper: " + upper);
         
     }
 }
