@@ -63,7 +63,14 @@ public class Driver
         System.out.println("apples with p replaced with M: " + temp);
         
         //substring
-        
+        String part1 = w1.substring(2);
+        System.out.println("Hello substring from location 2: " + part1);
+        String part2 = w6.substring(1, 4); //4-1 = 3
+        System.out.println("orange substring from location 1 to 3: " + part2);
+        String temp1 = w4.substring(0, w4.length() / 2);
+        String temp2 = w4.substring(w4.length() / 2);
+        String mixedUp = temp2 + temp1;
+        System.out.println("apples mixed up so the first half is last & the last half is first: " + mixedUp);
         
         //toLowercase & toUppercase
         
