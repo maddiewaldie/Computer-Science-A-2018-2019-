@@ -9,7 +9,7 @@ public class SeatingChart
 {
     private Student[][] seats; 
     //seats[r][c] represents the Student in row r and column c in the classroom
-    
+
     /**
      * Creates a seating chart with the given number of rows and columns
      * from the students in studentList.  Empty seats in the seating chart are
@@ -27,9 +27,24 @@ public class SeatingChart
      */
     public SeatingChart(List<Student> studentList, int rows, int cols)
     {
-        /* to be implemented in part (a) */
+        //Instantiate variables
+        seats = new Student[rows][cols];
+        int row = 0;
+        int col = 0;
+        
+        //Go through student list, assigning students to their seats
+        for (Student s : studentList)
+        {
+            seats[row][col] = s;
+            row++;
+            if (row == rows)
+            {
+                row = 0;
+                col++;
+            }
+        }
     }
-    
+
     /**
      * Removes students who have more than a given number of
      * absences from the seating chart, replacing those entries in the seating
@@ -44,16 +59,33 @@ public class SeatingChart
      */
     public int removeAbsentStudents(int allowedAbsences)
     {
-        /* to be implemented in part (b) */
+        //Create variable for num of students removed
+        int numRemoved = 0; 
+        
+        for (int r = 0; r < seats.length; r++) // go through all the rows
+        {
+            for (int c = 0; c < seats[0].length; c++) // go through all the columns
+            {
+                if (seats[r][c] != null && seats[r][c].getAbsenceCount() > allowedAbsences)
+                {
+                    seats[r][c] = null; // make seat empty
+                    numRemoved++; // increase the counter for num students removed
+                }
+            }
+        }
+        
+        //Return how many students that have been removed from seats
+        return numRemoved;
     }
-    
+
     //There may be instance variables, constructors, and methods that are not shown
-    
+
     //methods for testing - DO NOT ALTER
     public Student[][] getSeats()
     {
         return seats;
     }
+
     public String toString()
     {
         String temp="";
