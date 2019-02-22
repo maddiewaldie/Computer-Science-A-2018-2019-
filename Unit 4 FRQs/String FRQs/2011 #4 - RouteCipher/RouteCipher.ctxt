@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=RouteCipher
-comment0.text=\n\ Write\ a\ description\ of\ class\ RouteCipher\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ RouteCipher\ here.\n\n\ @author\ Madeleine\ Waldie\n\ @version\ February\ 22,\ 2019\n
 comment1.params=str
 comment1.target=void\ fillBlock(java.lang.String)
 comment1.text=\n\ Places\ a\ string\ into\ letterBlock\ in\ row-major\ order\n\ @param\ str\ the\ string\ to\ be\ processed\n\ Postcondition\:\n\ \ \ if\ str.length()\ <\ numRows\ *\ numCols,\ "A"\ is\ placed\ in\ each\ unfilled\ cell\n\ \ \ if\ str.length()\ >\ numRows\ *\ numCols,\ trailing\ characters\ are\ ignored\n
