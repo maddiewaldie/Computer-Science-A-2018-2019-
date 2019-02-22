@@ -69,9 +69,24 @@ public class Scrambler
      */
     public static List<String> scrambleOrRemove(List<String> wordList)
     {
-        /* to be implemented in part (b) */
-
-        //add code for part b above
+        for(String w : wordList)
+        {
+            w = scrambleWord(w);
+        }
+        int a = 0;
+        for(; a < wordList.size();)
+        {
+            String w = wordList.get(a);
+            wordList.set(a, scrambleWord(w));
+            if(w == wordList.get(a))
+            {
+                wordList.remove(a);
+            }
+            else
+            {
+                a++;
+            }
+        }
         return wordList; //DO NOT CHANGE - return used for testing
     }
 }
