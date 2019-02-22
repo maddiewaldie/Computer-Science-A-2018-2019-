@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=WordList
-comment0.text=\n\ Write\ a\ description\ of\ class\ WordList\ here.\n\n\ @author\ College\ Board\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ WordList\ here.\n\n\ @author\ Madeleine\ Waldie\n\ @version\ February\ 22,\ 2019\n
 comment1.params=words
 comment1.target=WordList(java.util.ArrayList)
 comment1.text=\n\ constructor\ -\ DO\ NOT\ ALTER\n\ used\ for\ testing\ purposes\n
