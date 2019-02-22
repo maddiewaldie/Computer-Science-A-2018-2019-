@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Scrambler
-comment0.text=\n\ Write\ a\ description\ of\ class\ Scrambler\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ Scrambler\ here.\n\n\ @author\ Madeleine\ Waldie\n\ @version\ February\ 22,\ 2019\n
 comment1.params=word
 comment1.target=java.lang.String\ scrambleWord(java.lang.String)
 comment1.text=\n\ Scrambles\ a\ given\ word.\n\ @param\ word\ the\ word\ to\ be\ scrambled\n\ @return\ the\ scrambled\ word\ (possibly\ equal\ to\ word)\n\ Precondition\:\ word\ is\ either\ an\ empty\ string\ or\ contains\n\ only\ uppercase\ letters\n\ Postcondition\:\ the\ string\ returned\ was\ created\ from\ word\ as\ \n\ follows\:\n\ \ \ -\ the\ word\ was\ scrambled,\ beginning\ at\ the\ first\ letter\ and\n\ \ \ continuing\ from\ left\ to\ right\n\ \ \ -\ two\ consecultive\ letters\ consisting\ of\ "A"\ followed\ by\ a\ letter\n\ \ \ that\ was\ not\ "A"\ were\ swapped\n\ \ \ -\ letters\ were\ swapped\ at\ most\ once\n

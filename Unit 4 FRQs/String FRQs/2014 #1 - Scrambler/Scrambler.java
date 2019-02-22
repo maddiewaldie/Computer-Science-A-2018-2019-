@@ -2,8 +2,8 @@ import java.util.*;
 /**
  * Write a description of class Scrambler here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Madeleine Waldie
+ * @version February 22, 2019
  */
 public class Scrambler
 {
@@ -24,8 +24,34 @@ public class Scrambler
     public static String scrambleWord(String word)
     {
         /* to be implemented in part (a) */
+        String scrambled = ""; //Create a string to add the scrambled word onto
+        int i = 0; //Create a counter
+
+        while (i < word.length()) //Go through word string
+        {
+            //Create variables for 1st & 2nd letters
+            String l1 = word.substring(i, i+1);
+            String l2 = ""; //Make l2 empty for now
+
+            if (i < word.length() - 1) //If l2 needs filled
+            {
+                l2 = word.substring(i+1, i+2); //Fill l2
+            }
+
+            if (l1.equals("A") && !l2.equals("A") && !l2.equals("")) //if the first letter is A & letter 2 isn't a or empty
+            {
+                scrambled += l2 + l1; //add the first  & second letter onto the scrambled string
+                i += 2; //increment i by 2
+            }
+            else //Otherwise
+            {
+                scrambled += l1; //add the first letter onto the scrambled string
+                i ++; //increment i by 1
+            }
+        }
+        return scrambled; //Return the new scrambled string
     }
-    
+
     /**
      * Modifies wordList by replacing each word with its scrambled
      * version, removing any words that are unchanged as a result
@@ -44,8 +70,7 @@ public class Scrambler
     public static List<String> scrambleOrRemove(List<String> wordList)
     {
         /* to be implemented in part (b) */
-        
-        
+
         //add code for part b above
         return wordList; //DO NOT CHANGE - return used for testing
     }
