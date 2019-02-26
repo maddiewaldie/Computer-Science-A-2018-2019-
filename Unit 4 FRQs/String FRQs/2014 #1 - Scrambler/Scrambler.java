@@ -69,22 +69,24 @@ public class Scrambler
      */
     public static List<String> scrambleOrRemove(List<String> wordList)
     {
-        for(String w : wordList)
-        {
-            w = scrambleWord(w);
-        }
-        int a = 0;
+        // Initialize variables
+        int a = 0; //counter
+        String w; //scrambled word
+        String y; //regular word
+        
+        // Go through word list
         for(; a < wordList.size();)
         {
-            String w = wordList.get(a);
-            wordList.set(a, scrambleWord(w));
-            if(w == wordList.get(a))
+            w = scrambleWord(wordList.get(a)); //make scrambled word
+            y = wordList.get(a); //make regular word
+            wordList.set(a, w); //set word list's current element to scrambled word
+            if(w.equals(y)) //check if scrambled word is same as regular word
             {
-                wordList.remove(a);
+                wordList.remove(a); //remove word
             }
             else
             {
-                a++;
+                a++; //increment counter
             }
         }
         return wordList; //DO NOT CHANGE - return used for testing
