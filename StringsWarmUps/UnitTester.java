@@ -58,7 +58,29 @@ public class UnitTester extends TestCase
         StringWarmup warmup = new StringWarmup();
         int numWords = warmup.countWords(phrase);
         
-        int expected = 5;
+        int expected = 0;
+        String msg = "Actual count: "+numWords+"\nExpected count: "+expected;
+        assertTrue(msg, numWords==expected);
+    }
+    
+    public void test6()
+    {
+        String phrase = "My Name Is Maddie ";
+        StringWarmup warmup = new StringWarmup();
+        int numWords = warmup.countWords(phrase);
+        
+        int expected = 4;
+        String msg = "Actual count: "+numWords+"\nExpected count: "+expected;
+        assertTrue(msg, numWords==expected);
+    }
+    
+    public void test7()
+    {
+        String phrase = "   Programming is fun   ";
+        StringWarmup warmup = new StringWarmup();
+        int numWords = warmup.countWords(phrase);
+        
+        int expected = 3;
         String msg = "Actual count: "+numWords+"\nExpected count: "+expected;
         assertTrue(msg, numWords==expected);
     }

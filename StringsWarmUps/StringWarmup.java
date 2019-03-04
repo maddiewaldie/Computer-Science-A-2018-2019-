@@ -18,7 +18,29 @@ public class StringWarmup
      */
     public int countWords(String phrase)
     {
-        
-        return 0; //for compiling purposes - will need to be changed
+        //Create counter
+        int count = 0;
+
+        //Go through only if 
+        if(phrase.length() > 0)
+        {
+            for(int i = 1; i < phrase.length(); i++)
+            {
+                if((phrase.charAt(i-1) != ' ' &&  phrase.charAt(i) == ' ') || (phrase.charAt(i-1) == '.'))
+                {
+                    count++; //Increase counter by 1
+                }
+            }
+            count++; //Increase counter by 1
+            if(phrase.length() == count)
+            {
+                count = 0; //Set count to 0
+            }
+            else  if(phrase.charAt(phrase.length() - 1) == ' ')
+            {
+                count --; //Decrement counter by 1
+            }
+        }
+        return count;
     }
 }
