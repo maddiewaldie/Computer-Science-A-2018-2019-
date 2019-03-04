@@ -55,7 +55,7 @@ public class Deck {
      */
     public boolean isEmpty() 
     {
-        if (cards.size() == 0) //If deck is empty
+        if (size == 0) //If deck is empty
         {
             return true;
         }
@@ -80,13 +80,15 @@ public class Deck {
      */
     public void shuffle() 
     {
-        for(int i = (size - 1); i >= 0; i--)
-        {
-            int random = (int)(Math.random() * i); //Creates random number
-            Card temp = cards.get(random); //Creates a temporary card
-            cards.set(random, cards.get(i));
-            cards.set(i, temp);
+        for (int k = cards.size() - 1; k > 0; k--) {
+            int howMany = k + 1;
+            int start = 0;
+            int randPos = (int) (Math.random() * howMany) + start;
+            Card temp = cards.get(k);
+            cards.set(k, cards.get(randPos));
+            cards.set(randPos, temp);
         }
+        size = cards.size();
     }
 
     /**
@@ -96,10 +98,13 @@ public class Deck {
      */
     public Card deal() 
     {
-        size -= 1;
-        if (size > 0) 
+        if (size > 0)
         {
-            return cards.get(size);
+            size -= 1;
+            if (size > 0) 
+            {
+                return cards.get(size);
+            }
         }
         return null;
     }

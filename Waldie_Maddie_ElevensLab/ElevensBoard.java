@@ -58,13 +58,16 @@ public class ElevensBoard extends Board {
     public boolean isLegal(List<Integer> selectedCards) 
     {
         //If the deck is not empty, & it eaither contains a pair that adds up to 11 or a JQK trio
-        if(selectedCards.size() > 0 && (containsPairSum11(selectedCards) || containsJQK(selectedCards)))
+        if (selectedCards.size() == 2) 
         {
-            return(true);
-        }
-        else //Does not meet any of the above conditions
+            return containsPairSum11(selectedCards);
+        } 
+        else if (selectedCards.size() == 3) 
         {
-            return(false);
+            return containsJQK(selectedCards);
+        } 
+        else {
+            return false;
         }
     }
 
