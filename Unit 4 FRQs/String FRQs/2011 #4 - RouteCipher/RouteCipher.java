@@ -1,3 +1,4 @@
+
 /**
  * Write a description of class RouteCipher here.
  *
@@ -89,6 +90,19 @@ public class RouteCipher
             encryptedMessage += encryptBlock(); //encrypt the block
             message = message.substring(num); //Take out the block we just encrypted from message
         }
+        
+        //Other solution
+        /*
+        String temp = "";
+        for(int loc = 0; loc<message.length(); loc+= (numRows*numCols))
+        {
+            //fill block
+            fillBlock(message.substring(loc));
+            //encrypt block
+            temp += encryptBlock();
+        }
+        return temp;
+        */
         return encryptedMessage; //Return the encrypted message
     }
 
