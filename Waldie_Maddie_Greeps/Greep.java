@@ -33,6 +33,7 @@ public class Greep extends Creature
     public void act()
     {
         super.act();   // do not delete! leave as first statement in act().
+        // Check if greep is carrying a tomato
         if (carryingTomato()) {
             if (atShip()) {
                 dropTomato();
@@ -42,7 +43,7 @@ public class Greep extends Creature
             }
         }
         else {
-            checkFood();
+            checkFood(); //Check if there is a tomato, and if so, load a tomato onto the greep's back
             moveGreepNoTomato();
         }
     }
@@ -80,17 +81,24 @@ public class Greep extends Creature
             return "greep.png";
     }
 
+    /**
+     * This method moves any greep that has a tomato.
+     */
     public void moveGreepTomato()
     {
         move();
         edgeDetector();
+        checkFood();
         if(!seePaint("orange") && !(atWater() || atWorldEdge()) && carryingTomato())
         {
             turnHome();
         }
 
     }
-
+    
+    /**
+     * This method moves any greep that does not have a tomato.
+     */
     public void moveGreepNoTomato()
     {
         if(!seePaint("purple") && !carryingTomato())
@@ -100,6 +108,10 @@ public class Greep extends Creature
         edgeDetector();
     }
 
+    /**
+     * This method detects whether a greep is at the edge of the screen or
+     * at the edge of the water. If so, the greeps will spit orange.
+     */
     public void edgeDetector()
     {
         if(atWater() || atWorldEdge())
