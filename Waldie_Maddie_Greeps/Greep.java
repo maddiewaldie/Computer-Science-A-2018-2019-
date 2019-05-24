@@ -87,11 +87,11 @@ public class Greep extends Creature
     public void moveGreepTomato()
     {
         move(); // Move greep
-        edgeDetector(); // Detect whether greep is at edge of screen or water
+        leaveEdgeTrail(); // Detect whether greep is at edge of screen or water
         checkFood(); // Is there any food here where we are? If so, try to load some!
 
         // If can turn toward ship & has a tomato
-        if(!seePaint("orange") && !(atWater() || atWorldEdge()) && carryingTomato())
+        if(!seePaint("orange") && !(isGreepAtEdge()) && carryingTomato())
         {
             turnHome(); // Turn toward ship
         }
@@ -108,21 +108,34 @@ public class Greep extends Creature
         {
             move(); // Move greep
         }
-        edgeDetector(); // Detect whether greep is at edge of screen or water
+        leaveEdgeTrail(); // Detect whether greep is at edge of screen or water
     }
 
     /**
      * This method detects whether a greep is at the edge of the screen or
      * at the edge of the water. If so, the greeps will spit orange.
      */
-    public void edgeDetector()
+    public void leaveEdgeTrail()
     {
         // If greep is somewhere where it will get stuck
-        if(atWater() || atWorldEdge())
+        if(isGreepAtEdge())
         {
             spit("orange"); // Leave an orange trail
             turn(20); // Turn 20º
         }
+    }
+    
+    /**
+     * This method detects whether a greep is at the edge of the screen or
+     * at the edge of the water.
+     */
+    public boolean isGreepAtEdge()
+    {
+        if (atWater() || atWorldEdge())
+        {
+            return true;
+        }
+        return false;
     }
 
 }
